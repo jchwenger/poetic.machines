@@ -20,3 +20,6 @@ wheels/
 
 # canvas
 **/*.ini
+
+# mediapipe models
+**/*.task
