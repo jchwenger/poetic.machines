@@ -13,3 +13,13 @@ The creative side of the course will draw inspiration from various movements, in
 This course is open to those who feel comfortable with writing as well as those who usually avoid it. Students will be free to choose to use their own writing, to work from existing materials (including literary works, articles, instruction manuals, tweets, slogans, logos, etc.), or experiment with the synthetic output of LLMs.
 
 *Poetic Machines* hopes to encourage opening up the creative possibilities of working between and beyond languages, from producing multilingual pieces to treating text as image and image as text.
+
+---
+
+## References: Learning Programming / Creative Coding
+
+- Dan Shiffman, ITP, [Creative Coding for Beginners](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) (JavaScript)
+- Dan Shiffman, ITP, [Programming with Text](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YrbSJBg32eTzUU50E2B8Ch) (JavaScript)
+- Dan Shiffman, ITP, [Workflow: Terminal, Shell, Node.js, VSCode](https://www.youtube.com/watch?v=46WOuOrMwTQ)
+- Dan Shiffman, ITP, [Git and Github for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)
+- Ana Bell, MIT, [Introduction to CS and Programming Using Python](https://www.youtube.com/playlist?list=PLUl4u3cNGP62A-ynp6v6-LGBCzeH3VAQB), comprehensive CS course with Python
