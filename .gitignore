@@ -17,3 +17,6 @@ wheels/
 
 # Vim
 **/*.sw*
+
+# canvas
+**/*.ini
