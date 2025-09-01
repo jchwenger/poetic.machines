@@ -13,8 +13,5 @@ dependencies = [
     "ollama>=0.5.3",
     "opencv-python>=4.12.0.88",
     "pillow>=11.3.0",
-    "py5canvas",
+    "py5canvas>=0.9",
 ]
-
-[tool.uv.sources]
-py5canvas = { path = "../../../comparts/py5canvas" }
