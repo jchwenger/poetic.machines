@@ -1,8 +1,7 @@
 from py5canvas import *
 
-erase_line = 0
+erase_row = 0
 erase_col = 0
-
 step_every = 20
 
 
@@ -13,7 +12,7 @@ def setup():
 
 
 def draw():
-    global erase_line
+    global erase_row
     global erase_col
 
     background(255)
@@ -25,17 +24,15 @@ def draw():
     text_size(25)
 
     word = "silencio"
-    n_line = 5
+    n_row = 5
     n_col = 3
 
-    sleep_time = 0.2
-
     # loop 1
-    for i in range(n_line):
+    for i in range(n_row):
         line = ""
         # loop 2
         for j in range(n_col):
-            if i == erase_line and j == erase_col:
+            if i == erase_row and j == erase_col:
                 line += " " * (len(word) + 1)
             else:
                 line += word + " "
@@ -43,9 +40,7 @@ def draw():
 
     if sketch.frame_count % step_every == 0:
         erase_col = (erase_col + 1) % n_col
-
         if erase_col == 0:
-            erase_line = (erase_line + 1) % n_line
-
+            erase_row = (erase_row + 1) % n_row
 
 run()
