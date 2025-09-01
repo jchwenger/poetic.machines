@@ -1,4 +1,4 @@
-# Poetic Machines
+# Poetic Machines
 
 MA/MFA Computational Arts at Goldsmiths College, by [*Iris Colomb*](https://iriscolomb.com/) and [*Jérémie Wenger*](https://jeremiewenger.com/)
 
