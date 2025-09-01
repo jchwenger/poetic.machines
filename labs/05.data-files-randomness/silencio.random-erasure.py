@@ -43,7 +43,7 @@ def draw():
                 line += " " * (len(word) + 1)
             else:
                 line += word + " "
-        text(line, [30 * j, 50 + 50 * i])
+        text(line, [60, 50 + 50 * i])
 
     if sketch.frame_count % step_every == 0:
         random_line = np.random.randint(0, n_line - 1)
