@@ -8,10 +8,10 @@ dependencies = [
     "jupyter>=1.1.1",
     "markdown>=3.8.2",
     "matplotlib>=3.10.5",
-    "mediapipe>=0.10.14",
+    "py5canvas>=0.9",
     "numpy>=2.2.6",
-    "ollama>=0.5.3",
     "opencv-python>=4.12.0.88",
     "pillow>=11.3.0",
-    "py5canvas>=0.9",
+    "ollama>=0.5.3",
+    "mediapipe>=0.10.14",
 ]
