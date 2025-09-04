@@ -7,6 +7,8 @@ import time
 import pathlib
 import urllib.request
 
+# mediapipe model ----------------------------------------------------------------
+
 import mediapipe as mp
 from mediapipe.tasks.python import vision
 from mediapipe.tasks.python.core import base_options as base_options_module
@@ -33,6 +35,8 @@ options = vision.FaceLandmarkerOptions(
     num_faces=1,
 )
 model = vision.FaceLandmarker.create_from_options(options)
+
+# --------------------------------------------------------------------------------
 
 video_size = 160
 video = VideoInput(size=(video_size, video_size))

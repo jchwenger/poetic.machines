@@ -7,6 +7,8 @@ import time
 import pathlib
 import urllib.request
 
+# mediapipe model ----------------------------------------------------------------
+
 import mediapipe as mp
 from mediapipe.tasks.python import vision
 from mediapipe.tasks.python.core import base_options as base_options_module
@@ -31,8 +33,7 @@ options = vision.PoseLandmarkerOptions(
 )
 model = vision.PoseLandmarker.create_from_options(options)
 
-# Segmentation mask display modes
-segmentation_mode = 0  # 0: No mask, 1: Transparent overlay, 2: Only mask
+# --------------------------------------------------------------------------------
 
 video_size = 512
 video = VideoInput(size=(video_size, video_size))
@@ -59,7 +60,6 @@ def draw():
 
     # Draw each detected person
     if result and result.pose_landmarks:
-
         # Canonical pose connections from the Solutions API
         POSE_CONNECTIONS = mp.solutions.pose.POSE_CONNECTIONS
 

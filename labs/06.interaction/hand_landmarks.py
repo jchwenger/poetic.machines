@@ -7,6 +7,8 @@ import time
 import pathlib
 import urllib.request
 
+# mediapipe model ----------------------------------------------------------------
+
 import mediapipe as mp
 from mediapipe.tasks.python import vision
 from mediapipe.tasks.python.core import base_options as base_options_module
@@ -28,6 +30,8 @@ if not model_path.exists():
 base_options = base_options_module.BaseOptions(model_asset_path=model_path)
 options = vision.HandLandmarkerOptions(base_options=base_options, num_hands=2)
 model = vision.HandLandmarker.create_from_options(options)
+
+# --------------------------------------------------------------------------------
 
 video_size = 512
 video = VideoInput(size=(video_size, video_size))
