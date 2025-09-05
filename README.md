@@ -22,4 +22,5 @@ This course is open to those who feel comfortable with writing as well as those 
 - Dan Shiffman, ITP, [Programming with Text](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YrbSJBg32eTzUU50E2B8Ch) (JavaScript)
 - Dan Shiffman, ITP, [Workflow: Terminal, Shell, Node.js, VSCode](https://www.youtube.com/watch?v=46WOuOrMwTQ)
 - Dan Shiffman, ITP, [Git and Github for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)
+- Allison Parrish, ITP, [Reading and Writing Electronic Text](https://rwet.decontextualize.com/) (and [more!](https://www.decontextualize.com/))
 - Ana Bell, MIT, [Introduction to CS and Programming Using Python](https://www.youtube.com/playlist?list=PLUl4u3cNGP62A-ynp6v6-LGBCzeH3VAQB), comprehensive CS course with Python
