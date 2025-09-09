@@ -7,7 +7,8 @@ def setup():
 
 
 def draw():
-    background(0, 0, 0, 8)  # Clear with alpha will create the "trail effect"
+    # Clear with alpha will create the "trail effect"
+    background(0, 0, 0, 8)
     push()
     # Center of screen
     translate(width / 2, height / 2)
