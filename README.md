@@ -24,3 +24,11 @@ This course is open to those who feel comfortable with writing as well as those 
 - Dan Shiffman, ITP, [Git and Github for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)
 - Allison Parrish, ITP, [Reading and Writing Electronic Text](https://rwet.decontextualize.com/) (and [more!](https://www.decontextualize.com/))
 - Ana Bell, MIT, [Introduction to CS and Programming Using Python](https://www.youtube.com/playlist?list=PLUl4u3cNGP62A-ynp6v6-LGBCzeH3VAQB), comprehensive CS course with Python
+
+## References: maths
+
+Working with programming suddenly brings back maths and logic as things that are really useful for understanding and making things (since they allow you precisely to describe behaviours or phenomena). It's never too late to start learning, and current resources are better than ever before! Here are a few recommendations, that can become quite useful when needing to refresh a particular subject:
+
+- [Grant Sanderson, aka 3Blue1Brown](https://www.youtube.com/3blue1brown)
+- [Eddie Woo](https://www.youtube.com/@misterwootube)
+- [Khan Academy](https://www.youtube.com/@khanacademy)
