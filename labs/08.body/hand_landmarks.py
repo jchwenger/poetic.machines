@@ -38,7 +38,7 @@ video = VideoInput(size=(video_size, video_size))
 
 
 def setup():
-    create_canvas(512, 512)
+    create_canvas(video_size, video_size)
 
 
 def draw():
@@ -123,10 +123,10 @@ def draw_floating_label(anchor_xy, text_str):
     # Backing rounded rect
     push()
     rect_mode(CORNER)
-    txt_pad_x, txt_pad_y = 6, 4
+    txt_pad_x, txt_pad_y = 6, 6
     text_size(10)
     tw = text_width(text_str)
-    th = 12  # approximate line height for size 10
+    th = text_height(text_str)
     no_stroke()
     fill(0, 0, 0, 180)
     rectangle(

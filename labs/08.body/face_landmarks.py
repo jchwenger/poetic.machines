@@ -38,12 +38,12 @@ model = vision.FaceLandmarker.create_from_options(options)
 
 # --------------------------------------------------------------------------------
 
-video_size = 160
+video_size = 512
 video = VideoInput(size=(video_size, video_size))
 
 
 def setup():
-    create_canvas(512, 512)
+    create_canvas(video_size, video_size)
 
 
 def draw():
