@@ -20,7 +20,7 @@ The recommended tech stack for this course is to use [miniforge](https://github.
 
 Once you have miniforge installed, you can create an environment with this command (you need to be in the `poetic.machines` directory!
 ```bash
-mamba create -f environment.yaml
+mamba env create -f environment.yaml
 ```
 
 Once this is done, you can activate your environment like so:
