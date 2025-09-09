@@ -30,7 +30,7 @@ def draw():
     text("goodbye", [140, 300])
 
     fill(0, 0, 255)
-    text_font("Verdana")
+    text_font("Brush Script MT")
     text_style("bolditalic")
     text_size(75)
     text("universe!", [60, 400])
