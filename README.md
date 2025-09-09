@@ -14,7 +14,41 @@ This course is open to those who feel comfortable with writing as well as those 
 
 *Poetic Machines* hopes to encourage opening up the creative possibilities of working between and beyond languages, from producing multilingual pieces to treating text as image and image as text.
 
----
+## Installation
+
+The recommended tech stack for this course is to use [miniforge](https://github.com/conda-forge/miniforge?tab=readme-ov-file#install), which is an optimised, more lightweight version of [Anaconda](https://www.anaconda.com).
+
+Once you have miniforge installed, you can create an environment with this command (you need to be in the `poetic.machines` directory!
+```bash
+mamba create -f environment.yaml
+```
+
+Once this is done, you can activate your environment like so:
+
+```bash
+conda activate poetic.machines
+```
+
+(You can use `conda deactivate` to turn it off.)
+
+To test that your environment works as it shoud, you can do:
+
+```bash
+which pip # on Linux/MacOS
+where pip # on Windows
+```
+
+And there should be a file path that has `miniforge/base/envs/poetic.machines/` in it.
+
+**Note**: this is equivalent to:
+
+```bash
+mamba create -n poetic.machines python==3.12
+conda activate poetic.machines
+# now your terminal should display the env name like so:
+# (poetic.machines) $ 
+pip install -r requirements.txt
+```
 
 ## References: Learning Programming / Creative Coding
 
