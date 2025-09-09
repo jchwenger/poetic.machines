@@ -50,6 +50,15 @@ conda activate poetic.machines
 pip install -r requirements.txt
 ```
 
+### Working on Colab
+
+When using [Google Colab](https://colab.research.google.com/) you will need to use the following cell to install `py5canvas` (based on [this](https://github.com/pygobject/pycairo/issues/39#issuecomment-391830334))
+
+```python
+!apt-get install libcairo2-dev libjpeg-dev libgif-dev
+!pip install py5canvas
+```
+
 ## References: Learning Programming / Creative Coding
 
 - Dan Shiffman, ITP, [Creative Coding for Beginners](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) (JavaScript)
