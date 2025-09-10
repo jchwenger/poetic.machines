@@ -59,16 +59,24 @@ When using [Google Colab](https://colab.research.google.com/) you will need to u
 !pip install py5canvas
 ```
 
-## References: Learning Programming / Creative Coding
+## References
 
-- Dan Shiffman, ITP, [Creative Coding for Beginners](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) (JavaScript)
+### Videos
+
+- Dan Shiffman, ITP, [Creative Coding for Beginners](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) (JavaScript) ([site](https://thecodingtrain.com/tracks/code-programming-with-p5-js))
 - Dan Shiffman, ITP, [Programming with Text](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YrbSJBg32eTzUU50E2B8Ch) (JavaScript)
-- Dan Shiffman, ITP, [Workflow: Terminal, Shell, Node.js, VSCode](https://www.youtube.com/watch?v=46WOuOrMwTQ)
-- Dan Shiffman, ITP, [Git and Github for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)
-- Allison Parrish, ITP, [Reading and Writing Electronic Text](https://rwet.decontextualize.com/) (and [more!](https://www.decontextualize.com/))
+- Dan Shiffman, ITP, [Workflow: Terminal, Shell, Node.js, VSCode](https://www.youtube.com/watch?v=46WOuOrMwTQ) ([site](https://thecodingtrain.com/tracks/2018-workflow))
+- Dan Shiffman, ITP, [Git and Github for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV) ([site](https://thecodingtrain.com/tracks/git-and-github-for-poets))
+- Allison Parrish, ITP, [Reading and Writing Electronic Text](https://rwet.decontextualize.com/) (and [more](https://www.decontextualize.com/)!)
 - Ana Bell, MIT, [Introduction to CS and Programming Using Python](https://www.youtube.com/playlist?list=PLUl4u3cNGP62A-ynp6v6-LGBCzeH3VAQB), comprehensive CS course with Python
 
-## References: maths
+### Books
+
+- Lauren McCarthy, Casey Reas, Ben Fry, [*Getting Started with p5.js*](https://www.oreilly.com/library/view/getting-started-with/9781457186769/)
+- Golan Levin, Tega Brain, [*Code as Creative Medium: A Handbook for Computational Art and Design*](https://mitpress.mit.edu/9780262542043/code-as-creative-medium/) ([repo](https://github.com/golanlevin/exercises))
+- Nick Montfort, [*Exploratory Programming for the Arts and Humanities (Second Edition)*](https://nickm.com/books/exploratory_programming_2e/)
+
+### Maths
 
 Working with programming suddenly brings back maths and logic as things that are really useful for understanding and making things (since they allow you precisely to describe behaviours or phenomena). It's never too late to start learning, and current resources are better than ever before! Here are a few recommendations, that can become quite useful when needing to refresh a particular subject:
 
