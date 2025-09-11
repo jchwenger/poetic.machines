@@ -54,6 +54,8 @@ def draw():
 def key_pressed(key):
     global my_text
 
+    print(f"key: {key}")
+
     # many control keys we don't want (KP: keypad)
     # TODO: implement DELETE (remove forward), arrow keys to move cursor...
     # (the following is an instruction for the formatter, ruff)
@@ -91,7 +93,8 @@ def key_pressed(key):
             my_text.append(key)
         else:
             my_text[-1] += key
-    print(f"key: {key} | text {my_text}")
+
+    print(f"           | text {my_text}")
 
 
 run()
