@@ -21,15 +21,4 @@ def draw():
     circle(100, 0, 20)
     pop()
 
-    # push()
-    ## Move somewhere to the bottom right
-    # translate(width - 80, height - 80)
-    ## No fill, draw in blue
-    # no_fill()
-    # stroke(0, 0, 255)
-    # rotate(-frame_count * 0.1)
-    # rectangle(0, 0, 40, 40)
-    # pop()
-
-
 run()
