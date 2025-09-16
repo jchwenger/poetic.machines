@@ -1,3 +1,9 @@
 # not tracking the saved image
 *.png
 *.svg
+
+!data/*.jpg
+!data/*.png
+
+# VSCode
+.vscode
