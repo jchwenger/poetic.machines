@@ -4,6 +4,3 @@
 
 !data/*.jpg
 !data/*.png
-
-# VSCode
-.vscode
