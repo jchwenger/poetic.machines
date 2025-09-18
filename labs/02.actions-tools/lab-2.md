@@ -2,7 +2,7 @@
 
 In each lab, we encourage you to go over the lecture material (the Jupyter notebooks), run things for yourself, try and modify the examples given, think about how they work, and how you could modify them to make them more familiar or useful to you.
 
-## Programming practice
+## 1. Programming practice
 
 In this lab, we are making our first steps in `py5canvas`. The concepts for today include:
 - the distinction between `setup` and `draw`;
@@ -16,9 +16,16 @@ In this lab, we are making our first steps in `py5canvas`. The concepts for toda
 - what do `push` and `pop` mean;
 - what does `rotate` and `translate` mean;
 
-## Analogue practice
+## 2. Analogue Experiment: Poetic Transformations
+
+1. Look back at these metamorphosis poems from today’s lecture. Find or choose one thing you like about them. Think about how each poem transforms, how each transition occurs.  
+2. Now, think of words and statements of your own and consider the relationships between them. 
+3. In pairs, share your words, use your ideas to make a new idea, and using pen and paper or equivalent devices, sketch out a collaborative metamorphosis poem. 
+
+### Note
 
 Often, especially when beginning to program, there can be a mismatch between what you *want* to do, and what you *can* do with your current programming abilities. It can be very fruitful to try and work from both sides of that gap: 1) work directly from programming, and see what the tools allow you to do (and learn new tools in the process); 2) work from your idea or project, formulate it on paper, or draw/type it (using 'old' technology), and think about what would be needed to achieve this with programming.
+
 
 # Inspirations/Examples
 
