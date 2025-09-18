@@ -1,6 +1,6 @@
 # Lab 1
 
-## 1. Installation
+## Installation
 
 In this lab, the technical goals are:
 - Clone the course repository using git or download it as a zip.
@@ -13,7 +13,7 @@ In this lab, the technical goals are:
   - Run a `py5canvas` sketch;
   - Open and run a Jupyter Notebook, and familiarise yourself with the interface (code and markdown cells).
 
-## 2. Analogue Experiment: Poetry Cubes
+## Analogue Experiment: Poetry Cubes
 
 ![Ilse Garnier, 'Jeu de Cubes'](data/garnier-cube.jpg)
 
