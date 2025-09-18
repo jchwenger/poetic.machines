@@ -4,7 +4,7 @@
 
 In this lab, the technical goals are:
 - Clone the course repository using git or download it as a zip.
-- Install a code editor if you do not have one (Visual Studio Code is recommended); In VSCode, the recommended plugins are: Jupyter; Python; Markdown All In One.
+- Install a code editor if you do not have one (Visual Studio Code is recommended); In VSCode, the recommended plugins are: Jupyter; Python; Markdown All In One; Live Server.
 - Follow the instructions in the `README.md` of the repository to install `miniforge` and:
   - create an environment for the course (called e.g. `poetic.machines`);
   - activate the environment;
@@ -13,10 +13,10 @@ In this lab, the technical goals are:
   - Run a `py5canvas` sketch;
   - Open and run a Jupyter Notebook, and familiarise yourself with the interface (code and markdown cells).
 
-## 2. Analogue practice
-
-The following work is by Ilse Garnier, ‘Jeu de Cubes’, from *Puzzle-Alphabet*, 1988: 
+## 2. Analogue Experiment: Poetry Cubes
 
 ![Ilse Garnier, 'Jeu de Cubes'](data/garnier-cube.jpg)
 
-Using this as inspiration (feel free to look into other pieces in her book), and the given paper templates, create a cube poem of your own.
+1. This poem is Ilse Garnier’s “Jeu de Cubes” from *Puzzle-Alphabet* (1988). Notice how words, letters, or shapes transform as they move across the cube’s faces. Think about how the poem changes when you look at it from different angles.
+2. Now, using the provided paper templates, design a cube poem of your own. Decide how text, symbols, or images will appear on each side, and consider how meaning shifts as the cube is turned.
+3. In pairs or small groups, share your cube poems. Explore how they can be read, played with, and reassembled, and discuss the different transformations that emerge.
