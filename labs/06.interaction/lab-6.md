@@ -6,6 +6,8 @@ In each lab, we encourage you to go over the lecture material (the Jupyter noteb
 
 In this lab, we are focussing on two fundamental ways in which we can interact with a computer: the **mouse** and the **keyboard**.
 
+[py5canvas reference](https://github.com/colormotor/py5canvas/tree/main/docs)
+
 ## Analogue Experiment: Poetic Interactions
 
 1. Look back at the interactive poetry activities from today’s lecture. Identify one mode of interaction you enjoyed or found engaging. Think about how input, output, and participation worked in that example.

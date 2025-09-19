@@ -6,6 +6,8 @@ In each lab, we encourage you to go over the lecture material (the Jupyter noteb
 
 In this lab, our main focus is to introduce the notion of **control flow** or **conditionals** (`if`, `elif` and `else`).
 
+[py5canvas reference](https://github.com/colormotor/py5canvas/tree/main/docs)
+
 ## Analogue Experiment: Poetic Mechanisms
 
 1. Look back at these early examples of kinetic poetry and find or choose one thing you found interesting about them. Think about how each poem moves, how these movements affect our perception of the text. Think of movements that are not used in these works. Pick three movements you would be interested in exploring in your own kinetic sculpture. 

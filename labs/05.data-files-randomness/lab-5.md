@@ -4,6 +4,8 @@ In each lab, we encourage you to go over the lecture material (the Jupyter noteb
 
 ## Programming practice
 
+[py5canvas reference](https://github.com/colormotor/py5canvas/tree/main/docs)
+
 ## Analogue Experiment: Poetic Findings
 
 1. Look back on today’s session on found poetry and conceptual writing. Think about how the poets in the examples shown here repurpose existing language and how they select, reframe, or transform it into something new.

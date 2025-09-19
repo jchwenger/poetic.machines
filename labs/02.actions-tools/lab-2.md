@@ -16,6 +16,8 @@ In this lab, we are making our first steps in `py5canvas`. The concepts for toda
 - what do `push` and `pop` mean;
 - what does `rotate` and `translate` mean;
 
+[py5canvas reference](https://github.com/colormotor/py5canvas/tree/main/docs)
+
 ## Analogue Experiment: Poetic Transformations
 
 1. Look back at these metamorphosis poems from today’s lecture. Find or choose one thing you like about them. Think about how each poem transforms, how each transition occurs.  

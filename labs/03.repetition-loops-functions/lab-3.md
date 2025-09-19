@@ -10,7 +10,7 @@ In this lab, we will focus on the following topics:
 - the use of **lists** to store multiple pieces of data;
 - the use of **loops** to execute commands multiple times.
 
-[p5canvas reference]()
+[py5canvas reference](https://github.com/colormotor/py5canvas/tree/main/docs)
 
 ## Analogue Experiment: Poetic Translation
 
