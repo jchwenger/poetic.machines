@@ -1,14 +1,10 @@
-# Face landmark detection using: https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker
-
-from py5canvas import *
-import numpy as np
-
-import time
-import pathlib
-import urllib.request
-
 # mediapipe model ----------------------------------------------------------------
 
+# Face landmark detection using:
+# https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker
+
+import pathlib
+import urllib.request
 import mediapipe as mp
 from mediapipe.tasks.python import vision
 from mediapipe.tasks.python.core import base_options as base_options_module
@@ -37,6 +33,9 @@ options = vision.FaceLandmarkerOptions(
 model = vision.FaceLandmarker.create_from_options(options)
 
 # --------------------------------------------------------------------------------
+
+from py5canvas import *
+import numpy as np
 
 video_size = 512
 video = VideoInput(size=(video_size, video_size))

@@ -1,14 +1,10 @@
-# Hand landmarks and handedness label detection with https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker
-
-from py5canvas import *
-import numpy as np
-
-import time
-import pathlib
-import urllib.request
-
 # mediapipe model ----------------------------------------------------------------
 
+# Hand landmarks and handedness label detection with:
+# https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker
+
+import pathlib
+import urllib.request
 import mediapipe as mp
 from mediapipe.tasks.python import vision
 from mediapipe.tasks.python.core import base_options as base_options_module
@@ -32,6 +28,9 @@ options = vision.HandLandmarkerOptions(base_options=base_options, num_hands=2)
 model = vision.HandLandmarker.create_from_options(options)
 
 # --------------------------------------------------------------------------------
+
+from py5canvas import *
+import numpy as np
 
 video_size = 512
 video = VideoInput(size=(video_size, video_size))
