@@ -17,7 +17,7 @@ def draw():
 
     # Center of screen
     translate(width / 2, height / 2)
-    
+
     # Rotating the canvas
     # (try changing the number, or adding `-` before)
     rotate(frame_count * 0.05)
