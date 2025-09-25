@@ -37,3 +37,17 @@ def draw():
 
 
 run()
+
+# IDEAS, to make it your own:
+# - Change the words.
+# - Change the placement of those words.
+# - Change the colour of the words.
+# - Change the typefaces of the words (the only requirements to pick a typeface
+#   is that it is installed in your system, but you can download them here:
+#   https://www.dafont.com/, https://www.1001freefonts.com/). It might also be
+#   possible to play with the the *name* of the fonts as well.
+# - Add or subtract words.
+# - Bonus: Note that nothing is stopping you from writing words *on top of one
+#   another*. That actually creates a very different aesthetic (both in terms
+#   of the colour combination but also the overal effect: cramming, packing,
+#   blurring the meanings of the words you use).
