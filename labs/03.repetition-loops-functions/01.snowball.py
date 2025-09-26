@@ -1,10 +1,11 @@
 from py5canvas import *
 
 
-# we define a variable called `to_be_snowballed`, containing
-# the text we want; later on, we pass that to `text` to display
+# we define a variable called `to_be_snowballed`, containing
+# the text we want; later on, we pass that to `text` to display
 # its contents
 to_be_snowballed = "the relief of the simplicity of it"
+
 
 def setup():
     create_canvas(400, 700)
@@ -20,7 +21,8 @@ def setup():
     # it starts with zero, then 1, then 2, etc.. (use `print` to see it in the
     # console)
     for i in range(len(to_be_snowballed) + 1):
-        text(to_be_snowballed[:i], 10,  i * 20)
+        text(to_be_snowballed[:i], 10, i * 20)
+
 
 run()
 
