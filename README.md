@@ -70,6 +70,10 @@ conda activate poetic.machines
 pip install -r requirements.txt
 ```
 
+### Working with VSCode
+
+To work with the [VSCode Editor](https://code.visualstudio.com/), you will need to install the **Python**, **Jupyter** and **Markdown All in One** extensions. (I recommend also **Live Server** for web things & p5.js).
+
 ### Working on Colab
 
 When using [Google Colab](https://colab.research.google.com/) you will need to use the following cell to install `py5canvas` (based on [this](https://github.com/pygobject/pycairo/issues/39#issuecomment-391830334))
@@ -80,6 +84,8 @@ When using [Google Colab](https://colab.research.google.com/) you will need to u
 ```
 
 ## References
+
+Apart from Python and Jupyter Notebooks, this course uses [py5canvas](https://github.com/colormotor/py5canvas), a creative coding library developed by [Daniel Berio](https://www.gold.ac.uk/computing/people/berio-daniel-/) at Goldsmiths.
 
 ### Videos
 
@@ -95,6 +101,7 @@ When using [Google Colab](https://colab.research.google.com/) you will need to u
 - Lauren McCarthy, Casey Reas, Ben Fry, [*Getting Started with p5.js*](https://www.oreilly.com/library/view/getting-started-with/9781457186769/)
 - Golan Levin, Tega Brain, [*Code as Creative Medium: A Handbook for Computational Art and Design*](https://mitpress.mit.edu/9780262542043/code-as-creative-medium/) ([repo](https://github.com/golanlevin/exercises))
 - Nick Montfort, [*Exploratory Programming for the Arts and Humanities (Second Edition)*](https://nickm.com/books/exploratory_programming_2e/)
+- Lillian-Yvonne Bertram, Nick Montfort (eds). [*An Anthology of Computer-Generated Text, 1953–2023*](https://mitpress.mit.edu/9780262549813/output/). MIT, 2024.
 
 ### Maths
 
