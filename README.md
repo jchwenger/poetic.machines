@@ -18,7 +18,19 @@ This course is open to those who feel comfortable with writing as well as those 
 
 The recommended tech stack for this course is to use [miniforge](https://github.com/conda-forge/miniforge?tab=readme-ov-file#install), which is an optimised, more lightweight version of [Anaconda](https://www.anaconda.com).
 
-Once you have miniforge installed, you can create an environment with this command (you need to be in the `poetic.machines` directory!
+- On **MacOS**/**Linux**: open a terminal, follow the `Unix-like platforms` instructions (downloading the script and running it, then the configuration steps). When this is successful, you should be able to open a new terminal window, type `conda` or `mamba`, and some text should appear (**not** `command not found`). 
+- On **Windows**, my recommendation is: 1) download the `.exe` installer, which comes with its own terminal, and don't forget to tick the boxes:
+  - *Add Miniforge to my PATH environment variable* as well as
+  - *Register Miniforge as my default Python* and
+  - *Clear the package cache upon completion*.
+  On top of that, in order to have a nicer terminal experience, with git + unix commands, and more possibilities to grow if you ever feel like it, I recommend using [Git Bash](https://gitforwindows.org/). If the miniforge install went well, you should be able to open the terminal in Git Bash, type `conda` or `mamba`, and , and some text should appear (**not** `command not found`).
+
+For all platforms, I recommend then doing:
+- `conda init` and
+- `conda config --set auto_activate_base false`
+
+Once you have miniforge installed, you can create an environment with the following command (you need to be in the `poetic.machines` directory! (In case you're wondering `mamba` below is the same as `conda`, just newer & faster.)
+
 ```bash
 mamba env create -f environment.yaml
 ```
@@ -27,6 +39,12 @@ Once this is done, you can activate your environment like so:
 
 ```bash
 conda activate poetic.machines
+```
+
+The next line should have your environment name in parentheses:
+
+```bash
+(poetic.machines) $
 ```
 
 (You can use `conda deactivate` to turn it off.)
@@ -40,7 +58,9 @@ where pip # on Windows
 
 And there should be a file path that has `miniforge/base/envs/poetic.machines/` in it.
 
-**Note**: this is equivalent to:
+#### Note
+
+The above is equivalent to:
 
 ```bash
 mamba create -n poetic.machines python==3.12
