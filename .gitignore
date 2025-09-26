@@ -6,11 +6,15 @@ dist/
 wheels/
 *.egg-info
 
-# Jupyter
+# Jupyter, python
 **/.ipynb_checkpoints
+**/__pycache__
 
 # Virtual environments
 .venv
+.env
+venv
+env
 
 # MacOS
 **/.DS_Store
