@@ -19,7 +19,7 @@ This course is open to those who feel comfortable with writing as well as those 
 The recommended tech stack for this course is to use [miniforge](https://github.com/conda-forge/miniforge?tab=readme-ov-file#install), which is an optimised, more lightweight version of [Anaconda](https://www.anaconda.com).
 
 - On **MacOS**/**Linux**: open a terminal, follow the `Unix-like platforms` instructions (downloading the script and running it, then the configuration steps). When this is successful, you should be able to open a new terminal window, type `conda` or `mamba`, and some text should appear (**not** `command not found`). 
-- On **Windows**, my recommendation is: 1) download the `.exe` installer, which comes with its own terminal, and don't forget to tick the boxes:
+- On **Windows**, my recommendation is: download the `.exe` installer, which comes with its own terminal, and don't forget to tick the boxes:
   - *Add Miniforge to my PATH environment variable* as well as
   - *Register Miniforge as my default Python* and
   - *Clear the package cache upon completion*.
