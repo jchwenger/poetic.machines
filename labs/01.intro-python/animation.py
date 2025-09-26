@@ -22,11 +22,11 @@ def setup():
 
 
 def draw():
-    # the four numbers determines the colour (Red, Green, Blue, Alpha): https://rgbcolorpicker.com/
-    # redrawing the background with alpha will create the "trail effect" (we
-    # 'gradually' add black on top of what we draw below, things that we draw
-    # in the past will have more layers of semi-transparent background on top
-    # of them – they will slowly fade
+    # the four numbers determines the colour (Red, Green, Blue, Alpha):
+    # https://rgbcolorpicker.com/ redrawing the background with alpha will
+    # create the "trail effect" (we 'gradually' add black on top of what we
+    # draw below, things that we draw in the past will have more layers of
+    # semi-transparent background on top of them – they will slowly fade
     # (try removing the 8 (and the ',' before it) to see the difference)
     background(0, 0, 0, 8)
 
@@ -62,7 +62,7 @@ def draw():
 
 run()
 
-# IDEAD, to make it your own:
+# IDEAS, to make it your own:
 # - This week, we are not drilling into this particular sketch, but if you feel
 #   so inclined, feel free to look at the py5canvas documentation before next
 #   week: https://github.com/colormotor/py5canvas/tree/main/docs, it is quite
