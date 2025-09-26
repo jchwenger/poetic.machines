@@ -10,7 +10,7 @@ def setup():
     background(255)
 
     # `no_stroke` disables stroke/outline around shapes/text
-    # see below for how to add a stroke colour
+    # see below for how to add a stroke colour
     no_stroke()
 
     # `fill` with one parameter is a shade of grey: 0 for black, 255 for white
@@ -54,7 +54,6 @@ def setup():
     text("universe!", 60, 400)
 
 
-
 run()
 
 
@@ -72,7 +71,7 @@ run()
 #   of the colour combination but also the overal effect: cramming, packing,
 #   blurring the meanings of the words you use).
 
-# IMPORTANT NOTE: notice that in this sketch we only have `setup` and no
+# IMPORTANT NOTE: notice that in this sketch we only have `setup` and no
 # `draw`? This this means that this sketch will draw things **only once** (no
 # animation): `setup` runs once, but `draw` keeps running forever, redrawing
 # the canvas many times per second. We need this for animation, but for static
