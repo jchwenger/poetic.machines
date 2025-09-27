@@ -14,7 +14,7 @@ my_word = "PROGRESS?"
 # than doing loops, like in JavaScript, as Python loops are **slow**)
 x_indices = None
 
-# this is where we start on the 
+# this is where we start on the
 start_x = 0.0
 
 # this is the speed at which we slide to the right (sensitive, already 0.1 is
@@ -26,9 +26,10 @@ x_speed = 0.01
 # than smooth)
 step = 0.01
 
-# this can never go below 1 (and higher numbers quickly start not making much
+# this can never go below 1 (and higher numbers quickly start not making much
 # of a difference unless you 'zoom in')
 detail = 2
+
 
 def setup():
     global x_indices
@@ -45,6 +46,7 @@ def setup():
     # be clamped to 1 automatically if it's below that
     noise_detail(int(detail))
 
+
 def draw():
     global start_x
 
@@ -60,10 +62,10 @@ def draw():
     # array, of floats, within [0,1] (the same range as `random`)
     noise_array = noise(x_offsets)
 
-    # we have values in [0,1], multipling by height gets us [0,height]
+    # we have values in [0,1], multipling by height gets us [0,height]
     y_values = noise_array * height
 
-    # draw text at centre 
+    # draw text at centre
     text_font("Times New Roman")
     text_size(54)
     text_align(CENTER, CENTER)
@@ -72,11 +74,10 @@ def draw():
     pos = width / 2
 
     # here we centre the word in x, but for y we use our shifting noise value
-    # (make sure pos is an int when using it as an index)
+    # (make sure pos is an int when using it as an index)
     text(my_word, pos, y_values[int(pos)])
 
     if SHOW_SYSTEM:
-
         # use the values to draw the full curve
         stroke(255)
         no_fill()
@@ -99,6 +100,7 @@ def draw():
 
     start_x += x_speed
 
+
 run()
 
 # IDEAS, to make it your own:
@@ -111,7 +113,7 @@ run()
 #   and call `text` on each letter. Then of course you need to adjust the x
 #   coordinate of each letter, using an index, as we have seen in past labs. I
 #   recommend using the following template:
-#       
+#
 #       push()
 #       # translate to the middle of the width
 #       translate(width/2, 0)
