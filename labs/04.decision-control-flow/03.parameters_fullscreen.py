@@ -9,7 +9,7 @@ def parameters():
     return {
         "Show": True,
         "Le text": ("[]", {"multiline": True, "buf_length": 2024}),
-        "Size": (10, {"min": 33, "max": 400}),
+        "Size": (400, {"min": 50, "max": 500}),
         "X": (0.0, {"min": -100, "max": 100}),
         "Y": (0.0, {"min": -100, "max": 100}),
         "Color": ([255, 0, 0], {"type": "color"}),
