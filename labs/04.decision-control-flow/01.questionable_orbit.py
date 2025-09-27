@@ -9,13 +9,12 @@ def setup():
 
 
 def draw():
-
     # try adding an alpha parameter...
     background(0, 0, 0)
 
     # TODO 1: draw something here
 
-    push() # 1
+    push()  # 1
 
     # center of canvas and do a first rotation
     translate(width / 2, height / 2)
@@ -23,7 +22,7 @@ def draw():
 
     # TODO 2: draw something here
 
-    push() # 2
+    push()  # 2
 
     # move to where our white ! is going to be
     translate(100, 0)
@@ -37,28 +36,27 @@ def draw():
 
     # TODO 3: draw something here
 
-    push() # 3
-
+    push()  # 3
 
     # now start a new rotation
-    rotate(frame_count * .08)
+    rotate(frame_count * 0.08)
 
     # here we could translate again, but instead
-    # I draw text 
+    # I draw text
     text_size(20)
     no_stroke()
     fill(255, 0, 0)
     text("?", 70, 0)
 
-    pop() # 3
+    pop()  # 3
     # here we're back before we rotated the last time
     # TODO 3: draw something here, it should be at the same spot as before # 3
 
-    pop() # 2
+    pop()  # 2
     # here we're back before we translated to our !, so the center
     # TODO 2: draw something here, it should be at the same spot as before # 2
 
-    pop() # 1
+    pop()  # 1
 
     # here we're back before the first rotation and translation
     # (here we're )back in the top left corner)
@@ -74,7 +72,7 @@ run()
 # - As before, use the tools you know to change the look, feel and meaning
 #   (colours/typeface/placement) of your sketch.
 # - Experiment with the rotation speeds and directions.
-# - Either add a second main orbit, or a second orbiting object around '!'!
+# - Either add a second main orbit, or a second orbiting object around '!'!
 # - If you expand your canvas size, and increase the orbit of '!', and its
 #   statellites , can you now make something orbit around '?'?
 # - Extras: the orbit of planets is, famously, not circular, but elliptic. This

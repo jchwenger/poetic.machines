@@ -23,7 +23,7 @@ def draw():
     text_font("Courier New")
     text_size(25)
 
-    # this time
+    # this time
     word = "silencio"
     n_row = 5
     n_col = 3
@@ -33,7 +33,6 @@ def draw():
         line = ""
         # loop 2: for each column
         for j in range(n_col):
-
             # conditionals!
             if i == erase_row and j == erase_col:
                 # if i (row) and j (col) correspond to the row/col to erase,
@@ -50,7 +49,6 @@ def draw():
     # logic to make sure that the code is only executed at certain frames (with
     # `step_every = 20`, it will be when `frame_count` is 0, 20, 40, ...)
     if sketch.frame_count > 0 and sketch.frame_count % step_every == 0:
-
         # linear logic: we update the column, but if we reach the max, we go
         # back to zero
         erase_col = (erase_col + 1) % n_col
@@ -59,6 +57,7 @@ def draw():
         # (move down by one), so we use the same logic
         if erase_col == 0:
             erase_row = (erase_row + 2) % n_row
+
 
 run()
 
@@ -81,7 +80,7 @@ run()
 #     next-to-last, etc.)?
 #   - Change the poem to a square (same n_row/n_col): can you erase only the
 #     word in one diagonal?
-# - Extra: Notice how in the logic above we still build a text line for each
+# - Extra: Notice how in the logic above we still build a text line for each
 #   row, then display it? Another way of proceeding would be to just use `text`
 #   inside the conditional, and just draw the full poem word by word. For this,
 #   one additional thing is needed: `text_width`. Knowing the display width of
