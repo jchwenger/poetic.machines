@@ -73,6 +73,10 @@ run()
 #   - Can you make the erasure happen every two cols, or two rows, instead of
 #     every single one? (Note that the synchronisation between rows and columns
 #     might get trickier than what we have here, don't worry about it for now.)
+#   - For fun, can you test (and try to understand) what happens if you change
+#     the logical operator `and` for `or`? This changes when this entire
+#     line (the two expressions `i == erase_row`, `j == erase_col` combined)
+#     is `True` or `False`!
 #   - Can you reverse the direction of the flow (erase the last slot, then
 #     next-to-last, etc.)?
 #   - Change the poem to a square (same n_row/n_col): can you erase only the
