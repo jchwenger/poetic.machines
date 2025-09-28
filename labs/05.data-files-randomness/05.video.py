@@ -1,3 +1,6 @@
+# Unrolling Event (1965) Director: Paul Sharits Source:
+# https://www.gartenbergmedia.com/dvd-distribution-and-sales/experimental-narratives-avant-garde-shorts/fluxfilm-anthology
+
 from py5canvas import *
 
 video = VideoInput(

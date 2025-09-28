@@ -1,3 +1,6 @@
+# Edwin Morgan, ‘Computer's first Code Poem’, 1965. Source
+# https://www.researchgate.net/figure/Edwin-Morgan-Computers-first-Code-Poem-1965_fig7_328480411
+
 from py5canvas import *
 
 img = load_image("data/Edwin-Morgan.The-Computer-s-First-Code-Poem.1965.png")
