@@ -1,11 +1,12 @@
 from py5canvas import *
 
-# eyeballed
+# all of these numbers are eyeballed, depend on the font and taste!
 row_height = 30
 char_width = 16
 char_height = 22
 vertical_offset = 4
 
+# every 25 frames, our cursor will switch from green to black
 blink_every = 25
 cursor_colours = [(0, 255, 0), (0, 0, 0)]
 blink_state = 0
@@ -30,20 +31,31 @@ def draw():
 
     background(0)
 
-    current_colour = cursor_colours[blink_state]
+    # cursor ------------------------------------------------------------------
+
+    # at a regular rythm, `blink_every`, flip the blink state
     if sketch.frame_count % blink_every == 0:
         blink_state = (blink_state + 1) % 2
 
+    # update the colour and 
+    current_colour = cursor_colours[blink_state]
     fill(*current_colour)
-    line_offset = row_height * (len(my_text) - 1)
+
+    # width and height at which our cursor (after the text)
     x_pos = 50 + char_width * len(my_text[-1])
+    line_offset = row_height * (len(my_text) - 1)
     y_pos = 50 + line_offset - char_height + vertical_offset
 
+    # draw the cursor
     rectangle(x_pos, y_pos, char_width, char_height)
+
+    # text --------------------------------------------------------------------
 
     fill(0, 255, 0)
     for i, t in enumerate(my_text):
+        # y is easy, just move down one line
         y_pos = 50 + i * row_height
+
         # instead of calculating the real width of characters,
         # print them one by one
         for j, char in enumerate(t):
@@ -56,8 +68,11 @@ def key_pressed(key):
 
     print(f"key: {key}")
 
-    # many control keys we don't want (KP: keypad)
-    # TODO: implement DELETE (remove forward), arrow keys to move cursor...
+    # many control keys, we don't really need them (KP: keypad), but it's good
+    # to have a reference (see here:
+    # https://github.com/colormotor/py5canvas/blob/405ce311a941032d9b6c6e8fab557bd3f59cd355/py5canvas/run_sketch.py#L1864)
+    # TODO: implement DELETE (remove forward), arrow keys to move cursor, etc...
+
     # (the following is an instruction for the formatter, ruff)
     # fmt: off
     if key in [
@@ -76,19 +91,23 @@ def key_pressed(key):
     # fmt: on
 
     if key == "BACKSPACE":
-        # if the last line isn't emtpy
+        # if the last row isn't emtpy
         if len(my_text[-1]) > 0:
             # remove the last character
             my_text[-1] = my_text[-1][:-1]
+        # if the last row is empty and we have more than one line
         elif len(my_text) > 1:
+            # remove it
             my_text.pop()
+            # and remove the last char of the previous line
             my_text[-1] = my_text[-1][:-1]
+
     elif key == "ENTER":
-        # add a new line
+        # add a new row
         my_text.append("")
     else:
         # manual wrapping: if width is longer than
-        # 21 chars (eyeballed it), continue on a new line
+        # 19 chars (eyeballed it), continue on a new row
         if len(my_text[-1]) > 19:
             my_text.append(key)
         else:
@@ -99,8 +118,22 @@ def key_pressed(key):
 
 run()
 
-# TODO: fun idea: how to add add "> " at the beginning of each line (and handle
-#       the delete / wrap / new line logic)?
-
-# TODO: ideally we'd need the behaviour of repeated key presses with one key
-#       kept down
+# IDEAS, to make it your own:
+# - In some sense, this is just a 'technical' sketch, referring to early
+#   computer aesthetic as already played with in pop-culture films like The
+#   Matrix. Exploring the feel of this small interface this can already change
+#   the overall experience quite significantly (an interesting concept here is
+#   the one of 'skeuomorph', https://en.wikipedia.org/wiki/Skeuomorph, an
+#   artifact that deliberately hints at a former technology that it has
+#   replaced – like a digital 'notebook' integrating, as part of its design,
+#   fake metal rings that remind people of paper notebooks...)
+# - One fun alleyway of exploration, that has interesting implications
+#   especially if your language does not follow the left-to-right direction
+#   that Western languages have, would be to modify the sketch to write from
+#   right to left, or top to bottom.
+# - One could imagine other kinds of ways in which the seemingly simple act of
+#   typing could be made weirder: what if letter you type is displayed
+#   somehwere, randomly? What if the user only sees one letter at a time, the
+#   last one that was typed?
+# - Technical challenge: how would you go about adding a "> " at the beginning
+#   of each line (and handle the delete / wrap / new line logic)?

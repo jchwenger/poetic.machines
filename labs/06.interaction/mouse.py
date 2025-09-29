@@ -5,7 +5,10 @@ brush_mode = 0
 
 
 def brush(pos, delta, colour):
-    average_delta = (abs(delta[0]) + abs(delta[1])) / 2
+    # delta is a common name for 'difference' or 'gap' (it's also a Greek
+    # letter name): here we add x and y, divide by two, then the absolute value
+    # (so our number is positive, we can use it as the radius of a circle)
+    average_delta = abs((delta[0] + delta[1]) / 2)
     # also possible: use numpy to compute the norm (length) of the vector
     # (https://numpy.org/doc/2.3/reference/generated/numpy.linalg.norm.html)
     # average_delta = np.linalg.norm(delta)
@@ -13,8 +16,10 @@ def brush(pos, delta, colour):
 
     push()
     stroke(0)
-    fill(*colour)
+    fill(colour)
+    # use the delta as the radius of a circle
     circle(pos, average_delta * 5)
+    pop()
 
 
 def setup():
@@ -26,29 +31,71 @@ def draw():
     background(255, 20)
 
     if dragging:
+        # py5canvas conveniently keeps a global variable `mouse_delta` for you,
+        # constantly tracking the difference of the current mouse position and
+        # the previous one (it is a NumPy array with two elements, for x & y)
+        # Note: you could also compute it manually by keeping separate
+        # variables, `past_mouse_x`, `past_mouse_y`, and in `draw` do something
+        # like:
+        #   delta = mouse_x - past_mouse_x
+        #   past_mouse_x = mouse_x
         brush(mouse_pos, mouse_delta, (255, 0))
 
 
-def key_pressed(key):
-    print(f"Key pressed: {key}")
-
-
 def mouse_pressed():
-    print("Mouse down")
-    # a green circle when we click the mouse
+    # print("Mouse down")
+
     push()
+
+    # background flash
+    # using background means the rest is invisible (since it's a callback,
+    # executed later, being investigated)
+    # background(0)
+    # this actually works
+    fill(0)
+    rect(0, 0, width, height)
+
+    # a green circle when we click the mouse
     fill(0, 255, 0)
     circle(*mouse_pos, 30)
+
+    # and some text
+    fill(255)
+    text_size(130)
+    text_align(CENTER, CENTER)
+    text("CLICKED", center)
     pop()
 
 
 def mouse_released():
     print("Mouse up")
-    # a blue circle when we release the mouse
+
     push()
+
+    # background flash
+    fill(0)
+    rect(0, 0, width, height)
+
     fill(0, 0, 255)
+    # a blue circle when we release the mouse
     circle(*mouse_pos, 30)
+
+    # and some text
+    fill(255)
+    text_size(130)
+    text_align(CENTER, CENTER)
+    text("RELEASED", center)
     pop()
 
 
 run()
+
+# IDEAS, to make it your own:
+# - Two key elements of interaction are present here: the `delta`, namely the
+#   difference in position, which allows us to measure the speed of the mouse
+#   movement (and as you can see, the delta can be used to modify any
+#   animation, here simply the size of a circle drawn at the location of the
+#   mouse); and actions such as the pressing (or clicking) or the mouse, the
+#   dragging, and its final release. Here those are associated with relatively
+#   simple events (drawing some shapes & text), but nothing prevents you to
+#   think about more complicated processes.
