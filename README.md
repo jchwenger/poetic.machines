@@ -39,7 +39,7 @@ Once you have miniforge installed, you can create an environment with the follow
 mamba env create -f environment.yaml
 ```
 
-Once this is done, you can activate your environment like so:
+Now you can activate your environment directly in VSCode (Command Palette → `Python: Select Interpreter` → `poetic.machines`), or in any terminal like so:
 
 ```bash
 conda activate poetic.machines
