@@ -139,3 +139,12 @@ def draw_floating_label(anchor_xy, text_str):
 
 
 run()
+
+# IDEAS, to make it your own:
+# - One thing that could be done, to familiarise yourself with the landmarks
+#   and the geometry of the hands, would be to draw various shapes using only
+#   certain landmarks of your choice, to create a silhouette of a hand, or, as
+#   it were, a "hand mask" or a digital "glove".
+# - There is no obligation to display the video, and you could for instance
+#   imagine a blank canvas where points from the hand, can be used in artistic
+#   ways! To draw or influence shapes on the canvas in real time!

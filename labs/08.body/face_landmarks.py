@@ -113,6 +113,10 @@ def draw():
             stroke(64, 224, 208)  # teal
             draw_connections(pts, FACE_OVAL)
 
+            # # Face contours (eyes, eyebrows, mouth, around face)
+            # stroke(255, 0, 0)
+            # draw_connections(pts, CONTOURS)
+
     pop()
 
 
@@ -131,3 +135,25 @@ def draw_connections(pts, connections):
 
 
 run()
+
+# IDEAS, to make it your own:
+# - There is no obligation to display the video, and you could for instance
+#   imagine a blank canvas where a few points from the face are used to draw
+#   vanishing circles, using the same logic as when you want a circle to leave
+#   a trail behind it when it moves?
+# - We have a `landmarks_to_px` function because the landmarks are
+#   predicted in a *normalised* way (0-1). This means that instead of having
+#   the mask drawn on the person's face, you could also work with a smaller,
+#   fixed version of the face (e.g. in the upper left corner of the sketch), as
+#   the values are restricted to be always in the same range. This in turn
+#   could be used if you wanted a face mesh that moves like the person being
+#   filmed, but that stays fixed (instead of being superimposed to the same
+#   location in the image). Proprely scaled again, this 'static' yet moving
+#   face could occupy the whole canvas, like a mirror!
+# - Now we draw absolutely everything, and that could be a great starting point
+#   to create some sort of mask, but of course it's possible to do something
+#   different, using the various face points in different ways. It is probably
+#   particularly interesting if you focus on only some points (maybe one in
+#   each cheek? The corner of the eyes and/or the mouth? Or on the contrary
+#   less obvious combinations?). Using three-four points would allow you to
+#   define an arc, a spline, or a Bézier curve!
