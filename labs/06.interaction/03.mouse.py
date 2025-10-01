@@ -48,12 +48,7 @@ def mouse_pressed():
     push()
 
     # background flash
-    # using background means the rest is invisible (since it's a callback,
-    # executed later, being investigated)
-    # background(0)
-    # this actually works
-    fill(0)
-    rect(0, 0, width, height)
+    background(0)
 
     # a green circle when we click the mouse
     fill(0, 255, 0)
@@ -73,8 +68,7 @@ def mouse_released():
     push()
 
     # background flash
-    fill(0)
-    rect(0, 0, width, height)
+    background(0)
 
     fill(0, 0, 255)
     # a blue circle when we release the mouse
@@ -99,3 +93,8 @@ run()
 #   dragging, and its final release. Here those are associated with relatively
 #   simple events (drawing some shapes & text), but nothing prevents you to
 #   think about more complicated processes.
+# - Add random letters instead of circles? Think about how this distance
+#   measure, the `delta`, could be used creatively: at the end of the day, it
+#   just gives you one number, small when the mouse doesn't move much, big when
+#   it does, that can be used to control anything you want!
+
