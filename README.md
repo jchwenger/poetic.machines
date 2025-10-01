@@ -16,6 +16,8 @@ This course is open to those who feel comfortable with writing as well as those 
 
 ## Installation
 
+### Getting Python / `conda`
+
 The recommended tech stack for this course is to use [miniforge](https://github.com/conda-forge/miniforge?tab=readme-ov-file#install), which is an optimised, more lightweight version of [Anaconda](https://www.anaconda.com).
 
 - On **MacOS**/**Linux**: open a terminal, follow the [`Unix-like platforms` instructions](https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-macos-linux--wsl) (downloading the script and running it, then the configuration steps). When this is successful, you should be able to open a new terminal window, type `conda` or `mamba`, and some text should appear (**not** `command not found`). 
@@ -28,6 +30,8 @@ The recommended tech stack for this course is to use [miniforge](https://github.
 For all platforms, I recommend then doing:
 - `conda init` and
 - `conda config --set auto_activate_base false`
+
+### Install dependencies & create environment
 
 Once you have miniforge installed, you can create an environment with the following command (you need to be in the `poetic.machines` directory! (In case you're wondering `mamba` below is the same as `conda`, just newer & faster.)
 
