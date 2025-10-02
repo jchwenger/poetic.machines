@@ -1,16 +1,17 @@
-name: poetic.machines
+name: pm
 channels:
   - conda-forge
 dependencies:
   - python=3.12
   - pip
+  - jupyter
+  - matplotlib
+  - numpy
+  - opencv
+  - pillow
+  - pycairo
   - pip:
-    - jupyter>=1.1.1
-    - markdown>=3.8.2
-    - matplotlib>=3.10.5
-    - py5canvas>=0.9
-    - numpy>=2.2.6
-    - opencv-python>=4.12.0.88
-    - pillow>=11.3.0
-    - ollama>=0.5.3
-    - mediapipe>=0.10.14
+    - markdown
+    - py5canvas
+    - ollama
+    - mediapipe
