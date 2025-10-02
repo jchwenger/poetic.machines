@@ -28,7 +28,7 @@ The recommended tech stack for this course is to use [miniforge](https://github.
   On top of that, in order to have a nicer terminal experience, with git + unix commands, and more possibilities to grow if you ever feel like it, I recommend using [Git Bash](https://gitforwindows.org/). If the miniforge install went well, you should be able to open the terminal in Git Bash, type `conda` or `mamba`, and , and some text should appear (**not** `command not found`).
 
 For all platforms, I recommend then doing:
-- `conda init` and
+- `conda init --all` and
 - `conda config --set auto_activate_base false`
 
 ### Install dependencies & create environment
