@@ -42,4 +42,4 @@ run()
 # IMPORTANT NOTE: see?, here we have a static sketch with a draw. As it is, it
 # could be rewritten by eliminating the `def draw():` and placing everything in
 # `setup`. Of course, the capability of `draw` could be taken advantage of, and
-# some animation could be introduced.
+# some animation could be introduced: can you make it move???
