@@ -30,15 +30,15 @@ Often, especially when beginning to program, there can be a mismatch between wha
 
 Emmett Williams, ‘Like Attracts Like’, 1958.
 
-![Garnier Rythmes-et-silences](data/Garnier.Rythmes-et-silences.1.gif)
+![Garnier Rythmes-et-silences](../../pics/Garnier.rythmes-silences.1.jpg)
 
 Ilse Garnier, from *Rythmes et Silence*, 1973-75.
 
-![Garnier Rythmes-et-silences](data/Garnier.Rythmes-et-silences.2.gif)
+![Garnier Rythmes-et-silences](../../pics/Garnier.rythmes-silences.2.jpg)
 
 Ilse Garnier, from *Rythmes et Silence*, 1973-75.
 
-![Garnier Rythmes-et-silences](data/Garnier.Rythmes-et-silences.3.gif)
+![Garnier Rythmes-et-silences](../../pics/Garnier.rythmes-silences.3.jpg)
 
 Ilse Garnier, from *Rythmes et Silence*, 1973-75.
 
