@@ -35,11 +35,13 @@ For all platforms, I recommend then doing:
 
 ### Install dependencies & create environment
 
-Once you have miniforge installed, you can create an environment with the following command (you need to be in the `poetic.machines` directory! (In case you're wondering `mamba` below is the same as `conda`, just newer & faster.)
+Once you have miniforge installed, you can create an environment with the following command (you need to be in the `poetic.machines` directory! For that, either you open a terminal from VSCode [using the command palette or a shortcut](https://code.visualstudio.com/docs/terminal/basics), or using an open terminal – default in MacOS/Linux, Git-Bash in Windows –, typing `cd /full/or/relative/path/to/poetic.machines`, in MacOS you can drag & drop the `poetic.machines` folder from Finder and it'll convert that to the right address):
 
 ```bash
 mamba env create -f environment.yaml
 ```
+
+(In case you're wondering `mamba` below is the same as `conda`, just newer & faster.)
 
 Now you can activate your environment directly in VSCode (Command Palette → `Python: Select Interpreter` → `poetic.machines`), or in any terminal like so:
 
