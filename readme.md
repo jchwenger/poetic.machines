@@ -33,9 +33,13 @@ For all platforms, I recommend then doing:
 - `conda init --all` and
 - `conda config --set auto_activate_base false`
 
+The second should make `conda/mamba` available in all shells/terminals; the second one prevents the `(base)` environment being activated by default, which is good, since as a rule of thumb you **don't want to install anything in the `(base)` environment** (instead create custom ones for your needs).
+
 ### Install dependencies & create environment
 
 Once you have miniforge installed, you can create an environment with the following command (you need to be in the `poetic.machines` directory! For that, either you open a terminal from VSCode [using the command palette or a shortcut](https://code.visualstudio.com/docs/terminal/basics), or using an open terminal – default in MacOS/Linux, Git-Bash in Windows –, typing `cd /full/or/relative/path/to/poetic.machines`, in MacOS you can drag & drop the `poetic.machines` folder from Finder and it'll convert that to the right address):
+
+#### Install/Create
 
 ```bash
 mamba env create -f environment.yaml
@@ -43,7 +47,17 @@ mamba env create -f environment.yaml
 
 (In case you're wondering `mamba` below is the same as `conda`, just newer & faster.)
 
-Now you can activate your environment directly in VSCode (Command Palette → `Python: Select Interpreter` → `poetic.machines`), or in any terminal like so:
+#### Note: update
+
+To *update* your environment (say if I changed `environment.yaml` after you ran the above command (*/\_＼)), use:
+
+```bash
+mamba env update -f environment.yaml
+```
+
+#### Activate
+
+Now you can activate your environment directly in VSCode (Command Palette → `Python: Select Interpreter` → `poetic.machines`), or in any terminal (both are separate, but note that if you start a terminal from VSCode, your selected environment will be automatically activated for you):
 
 ```bash
 conda activate poetic.machines
@@ -60,13 +74,14 @@ The next line should have your environment name in parentheses:
 To test that your environment works as it shoud, you can do:
 
 ```bash
-which pip # on Linux/MacOS
-where pip # on Windows
+which pip # on Linux/MacOS and on Windows with Git-Bash
 ```
 
 And there should be a file path that has `miniforge/base/envs/poetic.machines/` in it.
 
-#### Note
+(You can actually check this on the Windows `cmd` terminal by doing: `where pip`.)
+
+##### Note: equivalent terminal commands
 
 The above is equivalent to:
 
@@ -75,12 +90,15 @@ mamba create -n poetic.machines python==3.12
 conda activate poetic.machines
 # now your terminal should display the env name like so:
 # (poetic.machines) $ 
-pip install -r requirements.txt
+conda install <all the packages listed just under `dependencies` in `environment.yaml`>
+pip install <all the packages listed just under `pip` in `environment.yaml`>
 ```
 
 ### Working with VSCode
 
 To work with the [VSCode Editor](https://code.visualstudio.com/), you will need to install the **Python**, **Jupyter** and **Markdown All in One** extensions. (I recommend also **Live Server** for web things & p5.js).
+
+When using Python (either running sketches or Jupyter Notebooks), you will need to use the Command Palette to select which environment to use (see [here](https://code.visualstudio.com/docs/python/environments#_working-with-python-interpreters)).
 
 ### Working on Colab
 
@@ -97,19 +115,19 @@ Apart from Python and Jupyter Notebooks, this course uses [py5canvas](https://gi
 
 ### Videos
 
-- Dan Shiffman, ITP, [Creative Coding for Beginners](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) (JavaScript) ([site](https://thecodingtrain.com/tracks/code-programming-with-p5-js))
-- Dan Shiffman, ITP, [Programming with Text](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YrbSJBg32eTzUU50E2B8Ch) (JavaScript)
-- Dan Shiffman, ITP, [Workflow: Terminal, Shell, Node.js, VSCode](https://www.youtube.com/watch?v=46WOuOrMwTQ) ([site](https://thecodingtrain.com/tracks/2018-workflow))
-- Dan Shiffman, ITP, [Git and Github for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV) ([site](https://thecodingtrain.com/tracks/git-and-github-for-poets))
-- Allison Parrish, ITP, [Reading and Writing Electronic Text](https://rwet.decontextualize.com/) (and [more](https://www.decontextualize.com/)!)
-- Ana Bell, MIT, [Introduction to CS and Programming Using Python](https://www.youtube.com/playlist?list=PLUl4u3cNGP62A-ynp6v6-LGBCzeH3VAQB), comprehensive CS course with Python
+- Dan Shiffman, ITP, [Creative Coding for Beginners](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA) (JavaScript) ([site](https://thecodingtrain.com/tracks/code-programming-with-p5-js)).
+- Dan Shiffman, ITP, [Programming with Text](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YrbSJBg32eTzUU50E2B8Ch) (JavaScript).
+- Dan Shiffman, ITP, [Workflow: Terminal, Shell, Node.js, VSCode](https://www.youtube.com/watch?v=46WOuOrMwTQ) ([site](https://thecodingtrain.com/tracks/2018-workflow)).
+- Dan Shiffman, ITP, [Git and Github for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV) ([site](https://thecodingtrain.com/tracks/git-and-github-for-poets)).
+- Allison Parrish, ITP, [Reading and Writing Electronic Text](https://rwet.decontextualize.com/) (and [more](https://www.decontextualize.com/)!).
+- Ana Bell, MIT, [Introduction to CS and Programming Using Python](https://www.youtube.com/playlist?list=PLUl4u3cNGP62A-ynp6v6-LGBCzeH3VAQB), comprehensive CS course in Python.
 
 ### Books
 
-- Lauren McCarthy, Casey Reas, Ben Fry, [*Getting Started with p5.js*](https://www.oreilly.com/library/view/getting-started-with/9781457186769/)
-- Golan Levin, Tega Brain, [*Code as Creative Medium: A Handbook for Computational Art and Design*](https://mitpress.mit.edu/9780262542043/code-as-creative-medium/) ([repo](https://github.com/golanlevin/exercises))
-- Nick Montfort, [*Exploratory Programming for the Arts and Humanities (Second Edition)*](https://nickm.com/books/exploratory_programming_2e/)
-- Lillian-Yvonne Bertram, Nick Montfort (eds). [*An Anthology of Computer-Generated Text, 1953–2023*](https://mitpress.mit.edu/9780262549813/output/). MIT, 2024.
+- Lauren McCarthy, Casey Reas, Ben Fry. [*Getting Started with p5.js*](https://www.oreilly.com/library/view/getting-started-with/9781457186769/). O'Reilly, 2015.
+- Golan Levin, Tega Brain. [*Code as Creative Medium: A Handbook for Computational Art and Design*](https://mitpress.mit.edu/9780262542043/code-as-creative-medium/) ([repo](https://github.com/golanlevin/exercises)), MIT, 2021.
+- Nick Montfort. [*Exploratory Programming for the Arts and Humanities (Second Edition)*](https://nickm.com/books/exploratory_programming_2e/). MIT, 2021.
+- Lillian-Yvonne Bertram, Nick Montfort (eds). [*Output. An Anthology of Computer-Generated Text, 1953–2023*](https://mitpress.mit.edu/9780262549813/output/). MIT, 2024.
 
 ### Maths
 
