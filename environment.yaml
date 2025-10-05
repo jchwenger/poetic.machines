@@ -10,9 +10,9 @@ dependencies:
   - opencv
   - pillow
   - pycairo
+  - ollama
+  - markdown
   - pip:
-    - markdown
     - strip-markdown
     - py5canvas
-    - ollama
     - mediapipe
