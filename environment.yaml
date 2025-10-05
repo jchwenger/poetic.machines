@@ -1,4 +1,4 @@
-name: pm
+name: poetic.machines
 channels:
   - conda-forge
 dependencies:
