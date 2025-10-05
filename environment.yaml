@@ -12,6 +12,7 @@ dependencies:
   - pycairo
   - pip:
     - markdown
+    - strip-markdown
     - py5canvas
     - ollama
     - mediapipe
