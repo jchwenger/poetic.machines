@@ -11,7 +11,12 @@ In each lab, we encourage you to go over the lecture material (the Jupyter noteb
 ## Programming practice
 
 In this lab, our focus is:
-- to have a look at the role of `translate` and `rotate`, as well as `push` and `pull` again in more detail, since those are very useful for all kinds of animations, and to keep your code tidier;
+- to have a look at the role of:
+  - `translate` ("move the canvas origin – the `0, 0` point – somewhere") and
+  - `rotate` ("turn the canvas around the origin" by a certain amount"), as well as
+  - `push` ("save the sketch state – current translate, rotate, and styles") and
+  - `pop` ("return to the last saved state, before the last call to `push`"),  
+  since those are very useful for all kinds of animations, and to keep your code tidier;
 - to introduce the notion of **control flow** or **conditionals** (`if`, `elif` and `else`), as well as the importance of logical operators (`and` and `or`);
 - to understand the importance of the **modulo** (`%`) operator to control the tempo/speed of animations;
 - to introduce the parameters helper, that allows us to change sketch variables using a GUI!

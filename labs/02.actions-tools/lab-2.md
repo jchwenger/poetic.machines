@@ -19,8 +19,6 @@ In this lab, we are making our first steps in `py5canvas`. The concepts for toda
   - how to control its colour (internal with `fill`, outline with `stroke`);
   - how to load and change fonts;
 - how to draw shapes;
-- what do `push` and `pop` mean;
-- what does `rotate` and `translate` mean;
 
 [py5canvas reference](https://github.com/colormotor/py5canvas/tree/main/docs). Remember, this is very similar to `p5.js`: when in doubt, try and have a look at the reference for this library, or check out the Coding Train on YouTube. The topics are very much the same!
 
@@ -52,6 +50,8 @@ Emmett Williams, ‘Like Attracts Like’, (1958).
 ![Augusto de Campos Amor](data/de-Campos.amor.jpg)
 
 Augusto de Campos, ‘Amor’, (1970).
+
+---
 
 ### Poems that say & do
 
