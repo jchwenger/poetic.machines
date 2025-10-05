@@ -14,6 +14,8 @@ This course is open to those who feel comfortable with writing as well as those 
 
 *Poetic Machines* hopes to encourage opening up the creative possibilities of working between and beyond languages, from producing multilingual pieces to treating text as image and image as text.
 
+<div id="installation"><div>
+
 ## Installation
 
 ### Getting Python / `conda`
