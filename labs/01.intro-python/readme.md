@@ -14,7 +14,7 @@
 In this lab, the technical goals are:
 - Clone the course repository using git or download it as a zip.
 - Install a code editor if you do not have one (Visual Studio Code is recommended); In VSCode, the recommended plugins are: Jupyter; Python; Markdown All In One; Live Server.
-- Follow the instructions in the [`README.md`](../../README.md#installation) of the repository to install `miniforge` and:
+- Follow the instructions in the [`readme.md`](../../readme.md#installation) of the repository to install `miniforge` and:
   - create an environment for the course (called e.g. `poetic.machines`);
   - activate the environment;
   - use `pip` (or `mamba`) to install the required software.
