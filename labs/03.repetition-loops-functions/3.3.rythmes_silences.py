@@ -3,6 +3,9 @@ from py5canvas import *
 margin = 50
 row_height = 30
 
+word1 = "rythmes"
+word2 = "et"
+word3 = "silence"
 
 def setup():
     create_canvas(400, 520)
@@ -18,10 +21,6 @@ def draw():
     text_font("Courier New")
     text_size(25)
 
-    word1 = "rythmes"
-    word2 = "et"
-    word3 = "silence"
-
     text("Read the TODOs", margin, margin)
     text("below (then delete", margin, margin + 50)
     text("me <3)", margin, margin + 100)
@@ -29,7 +28,7 @@ def draw():
     # TODO: draw word1 using `draw_word_right_aligned`, place it at `margin`,
     # `margin`
 
-    # TODO: draw word3 using `draw_word_right_aligned`, place it at `width -
+    # TODO: draw word3 using `draw_word_left_aligned`, place it at `width -
     # margin`, `margin`
 
     # TODO: now that you have used existing functions it is time for you to define
