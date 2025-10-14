@@ -24,11 +24,9 @@ def draw():
     line = "silencio silencio silencio"
     line_gap = "silencio          silencio"
 
-    for l,p in zip(poem, positions):
-        text(l, p)
-#     text("Use `line` and `line_gap` to", 60, 50)
-#     text("recreate the original poem.", 60, 100)
-#     text("(then look at the TODO...)", 60, 150)
+    text("Use `line` and `line_gap` to", 60, 50)
+    text("recreate the original poem.", 60, 100)
+    text("(then look at the TODO...)", 60, 150)
 
 run()
 
