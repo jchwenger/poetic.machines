@@ -37,7 +37,7 @@ def draw():
     #  `word2` in the middle of the canvas, using `width` and `height`
     # - once you have this, go below `# functions`, and write, on a new line:
     #
-    #       def draw_text_centered():
+    #       def draw_text_centred():
     #
     #   then cut the two lines you wrote earlier to display the text and paste
     #   them 'inside' this function (just below, with **one indentation** =
@@ -51,18 +51,21 @@ def draw():
     #   is:
     #   1) change it *definition* to:
     #
-    #       def draw_text_centered(word, x, y):
+    #       def draw_text_centred(word, x, y):
     #
     #   2) change the body (code inside) so that what was "word2" is now
     #   "word", and the two coordinates of `text` are `x` and `y`;
     #   3) change the *call* inside `draw` to this (with ... replaced with the
     #   x and y you used earlier:
     #
-    #       draw_text_centered(word2, ..., ...)
+    #       draw_text_centred(word2, ..., ...)
 
 
 # functions ----------------------------------------------------------------------
 
+# TODO: here you'll define your own `draw_text_centred` function
+
+# NO NEED UNDERSTAND WHAT FOLLOWS IN DETAIL (we'll see more of this later)
 
 def draw_word_right_aligned(word, x, y):
     text_align(RIGHT)
