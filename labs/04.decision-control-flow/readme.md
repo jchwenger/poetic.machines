@@ -21,6 +21,7 @@ In this lab, our focus is:
   since those are very useful for all kinds of animations, and to keep your code tidier;
 - to introduce the notion of **control flow** or **conditionals** (`if`, `elif` and `else`), as well as the importance of logical operators (`and` and `or`);
 - to understand the importance of the **modulo** (`%`) operator to control the tempo/speed of animations;
+- how to **call functions**, and how to **define** your own!
 - to introduce the parameters helper, that allows us to change sketch variables using a GUI!
 
 ## Inspirations
