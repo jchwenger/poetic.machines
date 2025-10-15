@@ -2,6 +2,8 @@
 
 In each lab, we encourage you to go over the lecture material (the Jupyter notebooks), run things for yourself, try and modify the examples given, think about how they work, and how you could modify them to make them more familiar or useful to you.
 
+[py5canvas reference](https://github.com/colormotor/py5canvas/tree/main/docs) (and [p5.js](https://p5js.org/reference/))
+
 ## Analogue Experiment: Poetic Findings
 
 1. Look back on today’s session on found poetry and conceptual writing. Think about how the poets in the examples shown here repurpose existing language and how they select, reframe, or transform it into something new.
@@ -15,6 +17,3 @@ In this lab, we are exploring *randomness* and the interaction with external dat
 - The second sketch demonstrates how to use Perlin noise, and perhaps how this might be used to create interesting animations.
 - The third sketch loads a pre-formatted text file, extracts from [Yoko Ono's *Grapefruit*](https://monoskop.org/images/archive/6/64/20190320203953%21Ono_Yoko_Grapefruit_A_Book_of_Instructions_and_Drawings_2000.pdf), and uses randomness to pick lines from various texts and recombines them into a new instruction!
 - The fourth and fifth sketches are literally just technical demos showing you how to load an image or a video.
-
-[py5canvas reference](https://github.com/colormotor/py5canvas/tree/main/docs)
-

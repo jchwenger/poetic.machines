@@ -2,6 +2,8 @@
 
 In each lab, we encourage you to go over the lecture material (the Jupyter notebooks), run things for yourself, try and modify the examples given, think about how they work, and how you could modify them to make them more familiar or useful to you.
 
+[py5canvas reference](https://github.com/colormotor/py5canvas/tree/main/docs) (and [p5.js](https://p5js.org/reference/))
+
 ## Analogue Experiment: Poetic Translation
 
 1. Look back at today’s session on Oulipo, generative constraints, and experimental translation. Identify the constraint or method you found most engaging.

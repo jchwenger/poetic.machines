@@ -2,6 +2,8 @@
 
 In each lab, we encourage you to go over the lecture material (the Jupyter notebooks), run things for yourself, try and modify the examples given, think about how they work, and how you could modify them to make them more familiar or useful to you.
 
+[py5canvas reference](https://github.com/colormotor/py5canvas/tree/main/docs) (and [p5.js](https://p5js.org/reference/))
+
 ## Analogue Experiment: Poetic Mechanisms
 
 1. Look back at these early examples of kinetic poetry and find or choose one thing you found interesting about them. Think about how each poem moves, how these movements affect our perception of the text. Think of movements that are not used in these works. Pick three movements you would be interested in exploring in your own kinetic sculpture.

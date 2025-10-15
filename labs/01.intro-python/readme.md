@@ -1,5 +1,7 @@
 # Lab 1
 
+[py5canvas reference](https://github.com/colormotor/py5canvas/tree/main/docs) (and [p5.js](https://p5js.org/reference/))
+
 
 ## Analogue experiment: Poetry Cubes
 
