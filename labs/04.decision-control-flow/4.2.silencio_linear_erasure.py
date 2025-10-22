@@ -48,7 +48,7 @@ def draw():
     # `step_every` to 1 and see how fast the change occurs (we use the modulo
     # logic to make sure that the code is only executed at certain frames (with
     # `step_every = 20`, it will be when `frame_count` is 0, 20, 40, ...)
-    if sketch.frame_count > 0 and sketch.frame_count % step_every == 0:
+    if frame_count > 0 and frame_count % step_every == 0:
         # linear logic: we update the column, but if we reach the max, we go
         # back to zero
         erase_col = (erase_col + 1) % n_col
