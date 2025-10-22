@@ -56,7 +56,7 @@ def draw():
         # then, if our column is at zero, it means we should update our row
         # (move down by one), so we use the same logic
         if erase_col == 0:
-            erase_row = (erase_row + 2) % n_row
+            erase_row = (erase_row + 1) % n_row
 
 
 run()
