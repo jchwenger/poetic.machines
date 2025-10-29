@@ -2,21 +2,26 @@ from py5canvas import *
 
 row_height = 50
 
-# load instructions from a text file, using Yoko Ono's Grapefruit (1964, extracts)
-# https://en.wikipedia.org/wiki/Grapefruit_(book)
-# (manually ported from the pdf source on Monoskop:
-# https://monoskop.org/images/archive/6/64/20190320203953%21Ono_Yoko_Grapefruit_A_Book_of_Instructions_and_Drawings_2000.pdf)
-
-with open("data/Ono.Grapefruit.extracts.txt", "r") as i:
-    # first, split each poem by the separator ('***' added manually), remove
-    # leading/trailing newlines, and split again by newlines
-    instructions = [p.strip().split("\n") for p in i.read().split("***")]
-
 new_instruction_length = random_int(1, 4)
 print(new_instruction_length)
 
-
 def setup():
+    # NOTE: in an earlier version, I loaded the file as a global, before `setup`:
+    #       this works fine when running this as a script: `python 5.3.grapefruitpy`
+    #       but it fails with VSCode, so instead I run this in setup and make `instructions`
+    #       global, which works in both cases
+    global instructions
+
+    # load instructions from a text file, using Yoko Ono's Grapefruit (1964, extracts)
+    # https://en.wikipedia.org/wiki/Grapefruit_(book)
+    # (manually ported from the pdf source on Monoskop:
+    # https://monoskop.org/images/archive/6/64/20190320203953%21Ono_Yoko_Grapefruit_A_Book_of_Instructions_and_Drawings_2000.pdf)
+
+    with open("data/Ono.Grapefruit.extracts.txt", "r") as i:
+        # first, split each poem by the separator ('***' added manually), remove
+        # leading/trailing newlines, and split again by newlines
+        instructions = [p.strip().split("\n") for p in i.read().split("***")]
+
     # we already know how tall our poem will be (since we don't wrap the text,
     # we can programmatically create our canvas, adding some margins as well
     # (1200 is done by hand, looking at the longest line)
