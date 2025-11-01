@@ -60,7 +60,7 @@ def compute_distances(x, y, centers):
     indz = None
     current_dist = math.inf
     for i, j, pos_x, pos_y in centers:
-        dist = ((x - pos_x) ** 2 + (y - pos_y) ** 2) / 2
+        dist = (x - pos_x) ** 2 + (y - pos_y) ** 2
         if dist < current_dist:
             indz = (i, j)
             current_dist = dist

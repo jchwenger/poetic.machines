@@ -114,8 +114,9 @@ def compute_distances(x, y, centers):
     current_dist = math.inf
     # looping through all the centers
     for i, j, pos_x, pos_y in centers:
-        # compute the distance of this point to the mouse
-        dist = ((x - pos_x) ** 2 + (y - pos_y) ** 2) / 2
+        # compute the distance of this point to the mouse (squared: you could
+        # take the square root, but it'd be more compute & same result)
+        dist = (x - pos_x) ** 2 + (y - pos_y) ** 2
         # if this distance is smaller than the current one, save the indices &
         # update the distance
         if dist < current_dist:
