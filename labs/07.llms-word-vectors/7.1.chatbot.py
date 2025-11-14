@@ -41,7 +41,7 @@ print("-" * len(msg))
 # Le chatbot
 # ----------
 
-# at its core, it's just a plain loop running forever... (ctrl+c to exit)
+# at its core, it's just a plain loop running forever... (ctrl+c to exit)
 
 while True:
     # get user input and trim it
@@ -60,9 +60,8 @@ while True:
 
     response = ""
 
-    # stream: we loop through all the chunks and print them one by one
+    # stream: we loop through all the chunks and print them one by one
     for chunk in stream:
-
         # if you want to debug things, you can print the response object
         # print(chunk)
         # breakpoint()
@@ -79,8 +78,12 @@ while True:
     if not response.endswith("\n"):
         print()
 
-    # save the bot response
+    # save the bot response
     messages.append({"role": "assistant", "content": response})
+
+#     print("--- debug ---")
+#     print(messages)
+#     print("--- debug ---")
 
 
 # IDEAS, to make it your own:
