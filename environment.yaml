@@ -11,6 +11,7 @@ dependencies:
   - pillow
   - pycairo
   - ollama
+  - ollama-python
   - markdown
   - pip:
     - strip-markdown
