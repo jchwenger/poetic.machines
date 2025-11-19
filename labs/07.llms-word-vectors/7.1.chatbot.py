@@ -45,7 +45,7 @@ print("-" * len(msg))
 
 while True:
     # get user input and trim it
-    user_input = input("> ")[2:]
+    user_input = input("> ")
 
     # TODO: add non-LLM functionalities here
 
