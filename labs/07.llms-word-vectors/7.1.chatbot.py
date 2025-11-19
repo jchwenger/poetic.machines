@@ -6,9 +6,10 @@ model_name = "gemma3:270m"
 # TODO: customise the system prompt
 system_prompt = """Only answer in Spanish."""
 
-messages = [
-    {"role": "system", "content": system_prompt},
-]
+# create the system message separately for later reuse
+system_message = {"role": "system", "content": system_prompt}
+
+messages = [system_message]
 
 # ollama ----------------------------------------------------------------------
 
@@ -44,19 +45,27 @@ print("-" * len(msg))
 # at its core, it's just a plain loop running forever... (ctrl+c to exit)
 
 while True:
-    # get user input and trim it
-    user_input = input("> ")[2:]
+
+    # get user input
+    user_input = input("> ")
 
     # TODO: add non-LLM functionalities here
 
-    # we add the current message to our history
-    messages.append({"role": "user", "content": user_input})
+    # create the current message object
+    current_message = {"role": "user", "content": user_input}
 
     stream = ollama.chat(
         model=model_name,
-        messages=messages,
+        # trick: to make sure our model *really* follows the system message,
+        # insert it right before the last (current) user message – this way,
+        # the model should follow these instructions and not lose track of them
+        # as the discussion grows
+        messages=messages + [system_message, current_message],
         stream=True,
     )
+
+    # we then add the current message to our history
+    messages.append(current_message)
 
     response = ""
 
@@ -81,9 +90,9 @@ while True:
     # save the bot response
     messages.append({"role": "assistant", "content": response})
 
-#     print("--- debug ---")
-#     print(messages)
-#     print("--- debug ---")
+    # print("--- debug ---")
+    # print(messages)
+    # print("--- debug ---")
 
 
 # IDEAS, to make it your own:
