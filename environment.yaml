@@ -16,4 +16,4 @@ dependencies:
   - pip:
     - strip-markdown
     - py5canvas
-    - mediapipe
+    - mediapipe==0.10.14

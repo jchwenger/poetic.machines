@@ -14,5 +14,5 @@ dependencies = [
     "opencv-python>=4.12.0.88",
     "pillow>=11.3.0",
     "ollama>=0.5.3",
-    "mediapipe>=0.10.14",
+    "mediapipe==0.10.14",
 ]
