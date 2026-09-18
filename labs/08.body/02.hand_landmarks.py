@@ -10,7 +10,9 @@ from mediapipe.tasks.python import vision
 from mediapipe.tasks.python.core import base_options as base_options_module
 
 # Path to the model file
-model_path = pathlib.Path("hand_landmarker.task")
+models_dir = pathlib.Path("models")
+models_dir.mkdir(exist_ok=True)
+model_path = models_dir / "hand_landmarker.task"
 
 # Check if the model file exists, if not, download it
 if not model_path.exists():
@@ -21,6 +23,8 @@ if not model_path.exists():
         while chunk := r.read(1024):
             o.write(chunk)
     print(f"Model downloaded and saved as {model_path}")
+else:
+    print(f"Model found in {models_dir}")
 
 # Initialize MediaPipe HandLandmarker
 base_options = base_options_module.BaseOptions(model_asset_path=model_path)
