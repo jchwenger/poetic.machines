@@ -7,7 +7,6 @@ import pathlib
 import urllib.request
 import mediapipe as mp
 from mediapipe.tasks.python import vision
-from mediapipe.tasks.python.core import base_options as base_options_module
 
 # Path to the model file
 models_dir = pathlib.Path("models")
@@ -26,12 +25,15 @@ if not model_path.exists():
 else:
     print(f"Model found in {models_dir}")
 
-# Initialize MediaPipe HandLandmarker
-base_options = base_options_module.BaseOptions(model_asset_path=model_path)
+# Initialize MediaPipe PoseLandmarker
 options = vision.PoseLandmarkerOptions(
-    base_options=base_options, output_segmentation_masks=True
+    base_options=mp.tasks.BaseOptions(model_asset_path=str(model_path)),
+    output_segmentation_masks=True,
 )
 model = vision.PoseLandmarker.create_from_options(options)
+
+# Connections used to draw the pose landmarks
+POSE_CONNECTIONS = vision.PoseLandmarksConnections.POSE_LANDMARKS
 
 # --------------------------------------------------------------------------------
 
@@ -63,9 +65,6 @@ def draw():
 
     # Draw each detected person
     if result and result.pose_landmarks:
-        # Canonical pose connections from the Solutions API
-        POSE_CONNECTIONS = mp.solutions.pose.POSE_CONNECTIONS
-
         for lms in result.pose_landmarks:
             pts = landmarks_to_px(lms)
 
@@ -93,8 +92,8 @@ def landmarks_to_px(lms):
 
 
 def draw_connections(pts, connections):
-    for a, b in connections:
-        line(pts[a], pts[b])
+    for connection in connections:
+        line(pts[connection.start], pts[connection.end])
 
 
 run()

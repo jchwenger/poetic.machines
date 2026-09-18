@@ -7,7 +7,6 @@ import pathlib
 import urllib.request
 import mediapipe as mp
 from mediapipe.tasks.python import vision
-from mediapipe.tasks.python.core import base_options as base_options_module
 
 # Path to the model file
 models_dir = pathlib.Path("models")
@@ -27,14 +26,25 @@ else:
     print(f"Model found in {models_dir}")
 
 # Initialize MediaPipe FaceLandmarker
-base_options = base_options_module.BaseOptions(model_asset_path=model_path)
 options = vision.FaceLandmarkerOptions(
-    base_options=base_options,
+    base_options=mp.tasks.BaseOptions(model_asset_path=str(model_path)),
     output_face_blendshapes=True,
     output_facial_transformation_matrixes=True,
     num_faces=1,
 )
 model = vision.FaceLandmarker.create_from_options(options)
+
+# Connection sets used to draw the face landmarks
+FC = vision.FaceLandmarksConnections
+TESSELLATION = FC.FACE_LANDMARKS_TESSELATION
+CONTOURS = FC.FACE_LANDMARKS_CONTOURS
+IRISES = FC.FACE_LANDMARKS_LEFT_IRIS + FC.FACE_LANDMARKS_RIGHT_IRIS
+LIPS = FC.FACE_LANDMARKS_LIPS
+LEFT_EYE = FC.FACE_LANDMARKS_LEFT_EYE
+RIGHT_EYE = FC.FACE_LANDMARKS_RIGHT_EYE
+LEFT_EB = FC.FACE_LANDMARKS_LEFT_EYEBROW
+RIGHT_EB = FC.FACE_LANDMARKS_RIGHT_EYEBROW
+FACE_OVAL = FC.FACE_LANDMARKS_FACE_OVAL
 
 # --------------------------------------------------------------------------------
 
@@ -68,18 +78,6 @@ def draw():
     result = model.detect(mp_image)
 
     if result and result.face_landmarks:
-        # Convenience aliases to MediaPipe Face Mesh connection sets
-        FM = mp.solutions.face_mesh
-        TESSELLATION = FM.FACEMESH_TESSELATION
-        CONTOURS = FM.FACEMESH_CONTOURS
-        IRISES = getattr(FM, "FACEMESH_IRISES", set())
-        LIPS = getattr(FM, "FACEMESH_LIPS", set())
-        LEFT_EYE = getattr(FM, "FACEMESH_LEFT_EYE", set())
-        RIGHT_EYE = getattr(FM, "FACEMESH_RIGHT_EYE", set())
-        LEFT_EB = getattr(FM, "FACEMESH_LEFT_EYEBROW", set())
-        RIGHT_EB = getattr(FM, "FACEMESH_RIGHT_EYEBROW", set())
-        FACE_OVAL = getattr(FM, "FACEMESH_FACE_OVAL", set())
-
         # Draw each detected face
         for lms in result.face_landmarks:
             pts = landmarks_to_px(lms)
@@ -134,8 +132,8 @@ def landmarks_to_px(lms):
 
 # Helper: draw a set of connections
 def draw_connections(pts, connections):
-    for i, j in connections:
-        line(pts[i], pts[j])
+    for connection in connections:
+        line(pts[connection.start], pts[connection.end])
 
 
 run()

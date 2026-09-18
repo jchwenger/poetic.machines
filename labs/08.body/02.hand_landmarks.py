@@ -7,7 +7,6 @@ import pathlib
 import urllib.request
 import mediapipe as mp
 from mediapipe.tasks.python import vision
-from mediapipe.tasks.python.core import base_options as base_options_module
 
 # Path to the model file
 models_dir = pathlib.Path("models")
@@ -27,9 +26,13 @@ else:
     print(f"Model found in {models_dir}")
 
 # Initialize MediaPipe HandLandmarker
-base_options = base_options_module.BaseOptions(model_asset_path=model_path)
-options = vision.HandLandmarkerOptions(base_options=base_options, num_hands=2)
+options = vision.HandLandmarkerOptions(
+    base_options=mp.tasks.BaseOptions(model_asset_path=str(model_path)), num_hands=2
+)
 model = vision.HandLandmarker.create_from_options(options)
+
+# Connections used to draw the hand landmarks
+HAND_CONNECTIONS = vision.HandLandmarksConnections.HAND_CONNECTIONS
 
 # --------------------------------------------------------------------------------
 
@@ -61,9 +64,6 @@ def draw():
 
     # Draw each detected hand
     if result and result.hand_landmarks:
-        # Convenience alias to the canonical connection set
-        HAND_CONNECTIONS = mp.solutions.hands.HAND_CONNECTIONS
-
         for i, lms in enumerate(result.hand_landmarks):
             pts = landmarks_to_px(lms)
 
@@ -97,8 +97,8 @@ def landmarks_to_px(lms):
 
 
 def draw_connections(pts, connections):
-    for a, b in connections:
-        line(pts[a], pts[b])
+    for connection in connections:
+        line(pts[connection.start], pts[connection.end])
 
 
 def handedness_label(result, hand_index):
