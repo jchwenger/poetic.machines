@@ -1,7 +1,7 @@
 [project]
 name = "poetic-machines"
 version = "0.1.0"
-description = "Add your description here"
+description = "A course of poetry and computation by Iris Colomb and Jérémie Wenger. Goldsmiths College, London"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
