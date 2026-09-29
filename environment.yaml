@@ -12,6 +12,7 @@ dependencies:
   - pycairo
   - moderngl
   - pyopengl
+  - svgpathtools
   - ollama-python
   - markdown
   - pip:
