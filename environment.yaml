@@ -13,6 +13,7 @@ dependencies:
   - ollama
   - ollama-python
   - markdown
+  - pyopengl
   - pip:
     - strip-markdown
     - py5canvas
