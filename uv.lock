@@ -1712,11 +1712,13 @@ dependencies = [
     { name = "markdown" },
     { name = "matplotlib" },
     { name = "mediapipe" },
+    { name = "moderngl" },
     { name = "numpy" },
     { name = "ollama" },
     { name = "opencv-python" },
     { name = "pillow" },
     { name = "py5canvas" },
+    { name = "pyopengl" },
     { name = "strip-markdown" },
 ]
 
@@ -1726,11 +1728,13 @@ requires-dist = [
     { name = "markdown", specifier = ">=3.8.2" },
     { name = "matplotlib", specifier = ">=3.10.5" },
     { name = "mediapipe", specifier = "==0.10.14" },
+    { name = "moderngl", specifier = ">=5.12.0" },
     { name = "numpy", specifier = ">=2.2.6" },
     { name = "ollama", specifier = ">=0.5.3" },
     { name = "opencv-python", specifier = ">=4.12.0.88" },
     { name = "pillow", specifier = ">=11.3.0" },
     { name = "py5canvas", specifier = ">=0.9" },
+    { name = "pyopengl", specifier = ">=3.1.9" },
     { name = "strip-markdown", specifier = ">=1.3" },
 ]
 

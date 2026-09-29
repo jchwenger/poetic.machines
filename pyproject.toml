@@ -15,4 +15,6 @@ dependencies = [
     "pillow>=11.3.0",
     "ollama>=0.5.3",
     "mediapipe==0.10.14",
+    "pyopengl>=3.1.9",
+    "moderngl>=5.12.0",
 ]
