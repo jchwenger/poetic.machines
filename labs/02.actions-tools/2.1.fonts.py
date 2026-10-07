@@ -3,7 +3,6 @@ from py5canvas import *
 
 def setup():
     create_canvas(512, 512)
-    background(255)
     frame_rate(60)
 
     # everything from here could go into a draw function
