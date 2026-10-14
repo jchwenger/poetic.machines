@@ -7,7 +7,7 @@ In each lab, we encourage you to go over the lecture material (the Jupyter noteb
 ## Analogue Experiment: Poetic Translation
 
 1. Look back at today’s session on Oulipo, generative constraints, and experimental translation. Identify the constraint or method you found most engaging.
-2. Work in pairs and select a source material (any material not involving text) for your partner. They will be tasked to translate this material into text using a method of their choice, staying clear of descriptions.
+2. Work in pairs and select a source material (any material not involving text) for your partner. You will be tasked to translate this material into text using a method of your choice, staying clear of descriptions.
 3. Share your translations with each other. Reflect on how different rules, source materials, and approaches shaped the results.
 
 ## Programming practice
