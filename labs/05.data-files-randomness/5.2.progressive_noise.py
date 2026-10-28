@@ -14,7 +14,7 @@ my_word = "PROGRESS?"
 # than doing loops, like in JavaScript, as Python loops are **slow**)
 x_indices = None
 
-# this is where we start on the
+# this is where we start on the noise curve
 start_x = 0.0
 
 # this is the speed at which we slide to the right (sensitive, already 0.1 is
@@ -52,15 +52,16 @@ def draw():
 
     background(150)
 
-    # our `x_indices` (from 0 to width), are spaced according to step (if
-    # `step` is 2, then instead of 0,1,2,... we have 0,2,4,...), increasing the
-    # randomness of the values we get, and we also shift by shifted right by
-    # `start_x` (if it's 5, then `x_indices` will start from 5 instead of 0)
-    x_offsets = start_x + x_indices * step
+    # create the 'timesteps' array using our `x_indices` (from 0 to width),
+    # which are spaced according to step (if `step` is 2, then instead of
+    # 0,1,2,... we have 0,2,4,...), increasing the randomness of the values we
+    # get, and we also shift by shifted right by `start_x` (if it's 5, then
+    # `x_indices` will start from 5 instead of 0)
+    t_s = start_x + x_indices * step
 
     # vectorized noise call: noise takes in a whole array, and returns another
     # array, of floats, within [0,1] (the same range as `random`)
-    noise_array = noise(x_offsets)
+    noise_array = noise(t_s)
 
     # we have values in [0,1], multipling by height gets us [0,height]
     y_values = noise_array * height
