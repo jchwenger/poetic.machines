@@ -1,13 +1,13 @@
 from py5canvas import *
 import numpy as np
 
-step_every = 20
+update_every = 20
 
-n_line = 5
+n_row = 5
 n_col = 3
 
-random_line = np.random.randint(0, n_line - 1)
-random_col = np.random.randint(0, n_col - 1)
+random_row = random_int(0, n_row - 1)
+random_col = random_int(0, n_col - 1)
 
 
 def setup():
@@ -17,7 +17,7 @@ def setup():
 
 
 def draw():
-    global random_line
+    global random_row
     global random_col
 
     background(255)
@@ -35,26 +35,23 @@ def draw():
     # here we have the same logic as last week,
     # with only one big difference: our conditional
     # is now 
-    for i in range(n_line):
+    for i in range(n_row):
         line = ""
         for j in range(n_col):
-            if i == random_line and j == random_col:
+            if i == random_row and j == random_col:
                 line += " " * (len(word) + 1)
             else:
                 line += word + " "
         text(line, [60, 50 + 50 * i])
 
-    if sketch.frame_count % step_every == 0:
-        # create a random number in [0,1], multiply it by the number we want,
-        # then turn that to an int (this works because `random` never actually
-        # outputs 1, so we never ever reach `n_line` or `n_col`, always a bit
-        # below, and the decimal part gets chopped off by int() (it's a *floor*
-        # rather than a *ceiling* operation)
-        random_line = int(random() * n_line)
-        random_col = int(random() * n_col)
+    if frame_count % update_every == 0:
+        # thanks to our modulo logic, we don't update the random row/col at
+        # every frame – when we do, we just reuse the same logic as above
+        random_row = random_int(0, n_row - 1)
+        random_col = random_int(0, n_col - 1)
 
         # for sanity you can always check
-        # print(random_line, random_col)
+        # print(random_row, random_col)
 
 
 run()
@@ -78,7 +75,7 @@ run()
 #     random numbers to select the integer in your RGBA values, or the size of
 #     the text, or even the font, if you define a list of font names at the
 #     start of the sketch!
-#   - Also, you could inject randomness in `step_every`, by picking a new
-#     random `step_every` in the same spot where we currently select
-#     `random_line` and `random_col`, creating a very different kind of
+#   - Also, you could inject randomness in `update_every`, by picking a new
+#     random `update_every` in the same spot where we currently select
+#     `random_row` and `random_col`, creating a very different kind of
 #     movement in the piece!
