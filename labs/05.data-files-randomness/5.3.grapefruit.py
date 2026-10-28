@@ -2,6 +2,7 @@ from py5canvas import *
 
 row_height = 50
 
+# https://github.com/colormotor/py5canvas/tree/main/docs#random_intlow-highnone-sizenone-dtypeclass-int
 new_instruction_length = random_int(1, 4)
 print(new_instruction_length)
 
@@ -41,7 +42,7 @@ def setup():
         # get a random instruction
         instr = get_random_instruction()
         # get any line which is not the first nor the last
-        line_idx = int(random(1, len(instr) - 1))
+        line_idx = random_int(1, len(instr) - 1)
         # write this line to the canvas
         text(instr[line_idx], row_height, row_height + (i + 1) * row_height)
 
@@ -53,7 +54,7 @@ def setup():
 
 
 def get_random_instruction():
-    idx = int(random(len(instructions)))
+    idx = random_int(0, len(instructions))
     return instructions[idx]
 
 
