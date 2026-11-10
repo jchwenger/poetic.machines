@@ -34,7 +34,7 @@ def draw():
     # cursor ------------------------------------------------------------------
 
     # at a regular rythm, `blink_every`, flip the blink state
-    if sketch.frame_count % blink_every == 0:
+    if frame_count % blink_every == 0:
         blink_state = (blink_state + 1) % 2
 
     # update the colour and 
