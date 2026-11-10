@@ -66,8 +66,9 @@ def draw():
             if display_system:
                 # display the centre of the word as a small blue dot
                 push()
-                fill(0, 0, 255)
-                circle(center_x, center_y, 2)
+                stroke(255, 0, 0)
+                no_fill()
+                circle(center_x, center_y, 5)
                 pop()
 
     if display_system:
