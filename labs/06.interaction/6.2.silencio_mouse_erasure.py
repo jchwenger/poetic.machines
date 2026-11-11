@@ -7,7 +7,6 @@ n_col = 3
 n_row = 5
 row_height = 50
 current_indz = None
-display_system = True
 
 
 def setup():
