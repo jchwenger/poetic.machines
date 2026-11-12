@@ -1,12 +1,18 @@
 import ollama
 
 # https://ollama.com/library/gemma3
+# You could also test: https://ollama.com/library/qwen3:0.6B
 model_name = "gemma3:270m"
 
-# TODO: customise the system prompt
-system_prompt = """Only answer in Spanish."""
+# TODO: customise the system prompt (because the model is tiny, this will
+# likely be clunky – the bigger the model, the better they understand/follow
+# prompts)
+# system_prompt = """Only answer in French."""
+system_prompt = """Always speak like a pirate."""
 
-# create the system message separately for later reuse
+# create the system message separately for later reuse (this depends on how the
+# model is trained: the Gemma family does not have 'system' messages, and
+# instead just uses 'user', unlike Qwen: https://ai.google.dev/gemma/docs/core/prompt-structure)
 system_message = {"role": "system", "content": system_prompt}
 
 messages = [system_message]
@@ -54,18 +60,25 @@ while True:
     # create the current message object
     current_message = {"role": "user", "content": user_input}
 
-    stream = ollama.chat(
-        model=model_name,
-        # trick: to make sure our model *really* follows the system message,
-        # insert it right before the last (current) user message – this way,
-        # the model should follow these instructions and not lose track of them
-        # as the discussion grows
-        messages=messages + [system_message, current_message],
-        stream=True,
-    )
-
     # we then add the current message to our history
     messages.append(current_message)
+    # print("-" * 40)
+    # print(messages)
+    # print("-" * 40)
+
+    stream = ollama.chat(
+        model=model_name,
+        messages=messages,
+        # think=False,
+        stream=True,
+        # limit repetition (important for small models)
+        # options here: https://docs.ollama.com/modelfile#valid-parameters-and-values
+        options={
+            "temperature": 1.0,
+            "repeat_penalty": 1.2,
+            "repeat_last_n": 256,
+        },
+    )
 
     response = ""
 
@@ -105,6 +118,10 @@ while True:
 #   https://learn.deeplearning.ai/courses/prompt-engineering-with-llama-2
 #   Note: this is clunky!, especially for small models. Don't expect full
 #   compliance : >.
+# - Important trick/TODO: if the small model forgets the system prompt after a
+#   while, one way to improve the changes it stays "in character" is to
+#   reinject the system prompt into each message automatically. Something like:
+#   {"role": "user", "content": f"{user_input}\n\n[Remember: {system_prompt}]"}
 # - If you wanted to add special, non-LLM-related functionalities, such
 #   as '/quit' to exit, as ollama itself implements, what you would need to do
 #   is add a check at the marked point, to see what the `user_input` looks like
