@@ -34,6 +34,12 @@ model = vision.HandLandmarker.create_from_options(options)
 # Connections used to draw the hand landmarks
 HAND_CONNECTIONS = vision.HandLandmarksConnections.HAND_CONNECTIONS
 
+# TODO: print the variable above to see what they contain
+# print(HAND_CONNECTIONS)
+
+# our result array (for printing, will be filled in draw)
+result = None
+
 # --------------------------------------------------------------------------------
 
 from py5canvas import *
@@ -48,6 +54,9 @@ def setup():
 
 
 def draw():
+
+    global result
+
     background(0)
 
     # Video frame
@@ -140,6 +149,16 @@ def draw_floating_label(anchor_xy, text_str):
     fill(255)
     text(text_str, (x, y))
     pop()
+
+def mouse_pressed():
+    # only print if a detection has occurred
+    if result:
+        # TODO: instead of printing the whole array, look at the terminal
+        # output and learn to select specific elements inside the complex
+        # object returned by the model (that allows you to print only what you
+        # need)
+        print(result)
+        print("---")
 
 
 run()

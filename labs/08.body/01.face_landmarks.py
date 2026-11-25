@@ -46,6 +46,12 @@ LEFT_EB = FC.FACE_LANDMARKS_LEFT_EYEBROW
 RIGHT_EB = FC.FACE_LANDMARKS_RIGHT_EYEBROW
 FACE_OVAL = FC.FACE_LANDMARKS_FACE_OVAL
 
+# TODO: print the variables above to see what they contain
+# print(TESSELLATION)
+
+# our result array (for printing, will be filled in draw)
+result = None
+
 # --------------------------------------------------------------------------------
 
 from py5canvas import *
@@ -60,6 +66,9 @@ def setup():
 
 
 def draw():
+
+    global result
+
     background(0)
 
     # Video frame
@@ -135,6 +144,15 @@ def draw_connections(pts, connections):
     for connection in connections:
         line(pts[connection.start], pts[connection.end])
 
+def mouse_pressed():
+    # only print if a detection has occurred
+    if result:
+        # TODO: instead of printing the whole array, look at the terminal
+        # output and learn to select specific elements inside the complex
+        # object returned by the model (that allows you to print only what you
+        # need)
+        print(result)
+        print("---")
 
 run()
 
